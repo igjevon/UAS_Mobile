@@ -16,4 +16,7 @@
     <color name="bgPrimary">#EDF1F8</color>
     <color name="blackPrimary">#21272C</color>
     <color name="greenPrimary">#1abc9c</color>
+    <color name="graySecondary">#dbdbdb</color>
+    <color name="redSecondary">#D50000</color>
+    <color name="redThird">#8B3A2B</color>
 </resources>
