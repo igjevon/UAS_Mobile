@@ -19,4 +19,6 @@
     <color name="graySecondary">#dbdbdb</color>
     <color name="redSecondary">#D50000</color>
     <color name="redThird">#8B3A2B</color>
+    <color name="brownPrimary">#8B3A2B</color>
+    <color name="blueProfile">#EDF1F8</color>
 </resources>

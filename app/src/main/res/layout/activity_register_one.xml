@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient_primary_blue"
-    tools:context=".SigninAct">
+    tools:context=".RegisterOneAct">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="149dp"
-        android:layout_height="95dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/logo21"
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backshop"
+
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient_primary_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="145dp"
         android:layout_height="33dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="124dp"
         android:text="SIGN UP"
-        android:textAlignment="center"
+        android:gravity="center_horizontal |center_vertical"
         android:textColor="#FFF"
         android:textSize="20sp"
+        android:background="@drawable/bg_judul"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.872"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,7 +48,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/bg_layout_white"
         android:orientation="vertical"
@@ -49,7 +56,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+        tools:layout_editor_absoluteY="159dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -104,6 +111,7 @@
                 android:paddingLeft="12dp"
                 android:textColor="@color/black" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -131,9 +139,9 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -150,11 +158,11 @@
                 android:layout_width="167dp"
                 android:layout_height="40dp"
                 android:background="@drawable/bg_btn_blue_primary"
+                android:gravity="center_horizontal|center_vertical"
                 android:text="CONTINUE"
                 android:textAlignment="center"
                 android:textColor="#FFF"
                 android:textSize="15sp" />
         </LinearLayout>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
