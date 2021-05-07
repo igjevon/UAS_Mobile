@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
+        android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_overlay_getstarted"
@@ -29,13 +30,14 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/emblem_app"
         android:layout_width="325dp"
         android:layout_height="165dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="100dp"
         android:src="@drawable/logo1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
     <Button
         android:id="@+id/btn_sign_in"
@@ -45,15 +47,17 @@
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="240dp"
         android:background="@color/brownPrimary"
+        android:gravity="center_horizontal|center_vertical"
         android:text="@string/signin"
         android:textAlignment="center"
-        android:gravity="center_horizontal|center_vertical"
         android:textColor="#FFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emblem_app"
+        app:layout_constraintVertical_bias="0.306" />
 
     <Button
         android:id="@+id/btn_new_account_create"
@@ -63,9 +67,9 @@
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="112dp"
         android:background="@drawable/bg_btn_white_nacc"
+        android:gravity="center_horizontal|center_vertical"
         android:text="NEW ACCOUNT"
         android:textAlignment="center"
-        android:gravity="center_horizontal|center_vertical"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,6 +77,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"
-        app:layout_constraintVertical_bias="0.111" />
+        app:layout_constraintVertical_bias="0.094" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
