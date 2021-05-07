@@ -14,7 +14,6 @@ public class Splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         //setting timer untuk 1 detik
-        //test1
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
