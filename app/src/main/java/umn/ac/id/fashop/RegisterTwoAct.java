@@ -92,7 +92,7 @@ public class RegisterTwoAct extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                             //berpindah activity
-                            Intent gotosuccess = new Intent(RegisterTwoAct.this, SuccessRegisterAct.class);
+                            Intent gotosuccess = new Intent(RegisterTwoAct.this, HomeActivity.class);
                             startActivity(gotosuccess);
                         }
                     });
