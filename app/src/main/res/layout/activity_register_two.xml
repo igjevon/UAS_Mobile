@@ -66,30 +66,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_layout_white"
+        android:orientation="vertical"
+        android:paddingTop="44dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
             <LinearLayout
-                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/bg_layout_white"
-                android:orientation="vertical"
-                android:paddingTop="44dp"
-                android:paddingBottom="30dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginTop="100dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginBottom="24dp"
-                    android:orientation="vertical">
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -106,15 +106,15 @@
                         android:lines="1"
                         android:paddingLeft="12dp"
                         android:textColor="@color/black" />
-                </LinearLayout>
+            </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginRight="24dp"
-                    android:layout_marginBottom="24dp"
-                    android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -130,13 +130,13 @@
                         android:lines="1"
                         android:paddingLeft="12dp"
                         android:textColor="@color/black" />
-                </LinearLayout>
+            </LinearLayout>
 
-                <LinearLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
                     <ImageView
                         android:id="@+id/btn_back"
                         android:layout_width="89dp"
@@ -145,59 +145,51 @@
                         android:layout_marginRight="15dp"
                         android:background="@color/grayPrimary"
                         android:src="@drawable/ic_baseline_arrow_back_24" />
-                    <Button
-                        android:id="@+id/btn_continue"
-                        android:layout_width="167dp"
-                        android:layout_height="40dp"
-                        android:background="@drawable/bg_btn_blue_primary"
-                        android:text="CONTINUE"
-                        android:textAlignment="center"
-                        android:textColor="#FFF"
-                        android:textSize="15sp" />
-                    </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_continue"
+                    android:layout_width="167dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_btn_blue_primary"
+                    android:text="CONTINUE"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="15sp" />
             </LinearLayout>
+    </LinearLayout>
+
+    <io.github.florent37.shapeofview.shapes.CircleView
+        android:id="@+id/circleView"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:elevation="4dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:shape_circle_borderColor="@android:color/black"
+        app:shape_circle_borderWidth="2dp">
 
         <ImageView
-            android:id="@+id/pic_photo_register_user"
+            android:id="@+id/pic_photo_register_user_circled"
             android:layout_width="90dp"
             android:layout_height="90dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="193dp"
-            android:layout_marginEnd="8dp"
-            android:src="@drawable/ic_baseline_perm_identity_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-        <com.github.florent37.shapeofview.shapes.CircleView
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="193dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-            <ImageView
-                android:id="@+id/pic_photo_register_user_circled"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:src="@drawable/jongki_man" />
-        </com.github.florent37.shapeofview.shapes.CircleView>
+            android:src="@drawable/jongki_man" />
+    </io.github.florent37.shapeofview.shapes.CircleView>
 
-        <Button
-            android:id="@+id/btn_add_photo"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginEnd="130dp"
-            android:layout_marginTop="60dp"
-            android:background="@drawable/bg_btn_plus"
-            android:text="+"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
+    <Button
+        android:id="@+id/btn_add_photo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="50dp"
+        android:translationZ="90dp"
+        android:background="@drawable/bg_btn_plus"
+        android:text="+"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/circleView"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
