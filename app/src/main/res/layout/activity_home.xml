@@ -49,15 +49,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/view" />
 
-            <ImageView
-                android:id="@+id/imageView"
+            <com.github.florent37.shapeofview.shapes.CircleView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/profile_default"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="85dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:id="@+id/pic_photo_home_user_circled"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/jongki_man" />
+            </com.github.florent37.shapeofview.shapes.CircleView>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -69,7 +73,6 @@
                 android:textColor="#FFF"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView2"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@id/textView2" />
 
             <TextView
