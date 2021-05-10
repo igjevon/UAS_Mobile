@@ -23,13 +23,24 @@
             android:layout_height="wrap_content">
 
             <View
-                android:id="@+id/view"
+                android:id="@+id/view_backshop"
                 android:layout_width="match_parent"
-                android:layout_height="310dp"
+                android:layout_height="260dp"
                 android:background="@drawable/backshop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:background="@drawable/bg_gradient_primary_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -45,7 +56,7 @@
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/view" />
+                app:layout_constraintTop_toTopOf="@+id/view_backshop" />
 
             <com.github.florent37.shapeofview.shapes.CircleView
                 android:id="@+id/circleView"
@@ -98,133 +109,164 @@
                 android:layout_marginEnd="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:text="IDR 287.000"
-                android:textColor="@color/greenPrimary"
+                android:textColor="#FFF"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textView2" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="112dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/bg_layout_white"
-                android:orientation="vertical"
-                android:paddingLeft="24dp"
-                android:paddingTop="30dp"
-                android:paddingRight="24dp"
-                android:paddingBottom="30dp"
+                android:text="Stay Home and Shop Online"
+                android:textColor="@color/blackPrimary"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.036"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_backshop" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollview_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2">
+                app:layout_constraintTop_toBottomOf="@+id/textView10">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Main Menu"
-                    android:textColor="@color/blackPrimary"
-                    android:textSize="28sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Stay Home and Shop Online"
-                    android:textColor="@color/grayPrimary"
-                    android:textSize="16sp" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="#EDEDED" />
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="25dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
-                    <LinearLayout
-                        android:id="@+id/man_view"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="10dp">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/jongki_man" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Men"
-                            android:textColor="@color/blackPrimary"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
+                            android:layout_width="130dp"
+                            android:layout_height="195dp"
+                            android:src="@drawable/tops" />
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_marginTop="4dp"
+                        android:text="Tops"
                         android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/yeobeen_woman" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Women"
-                            android:textColor="@color/blackPrimary"
-                            android:textSize="16sp" />
+                        android:textColor="@color/blackPrimary"
+                        android:textSize="16sp" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="10dp">
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="195dp"
+                            android:src="@drawable/bottoms" />
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_marginTop="4dp"
+                        android:text="Bottoms"
                         android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/munel_kids" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Kids"
-                            android:textColor="@color/blackPrimary"
-                            android:textSize="16sp" />
-                    </LinearLayout>
+                        android:textColor="@color/blackPrimary"
+                        android:textSize="16sp" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="10dp">
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="195dp"
+                            android:src="@drawable/dresses" />
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Dresses"
+                        android:gravity="center"
+                        android:textColor="@color/blackPrimary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="10dp">
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="195dp"
+                            android:src="@drawable/dresses" />
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Lounge Wear"
+                        android:gravity="center"
+                        android:textColor="@color/blackPrimary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
             </LinearLayout>
+            </HorizontalScrollView>
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="18dp"
                 android:text="New This Week"
                 android:textColor="@color/blackPrimary"
                 android:textSize="28sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                app:layout_constraintTop_toBottomOf="@+id/scrollview_category" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -301,13 +343,32 @@
                             android:textSize="12sp" />
                     </LinearLayout>
 
-                    <ImageView
-                        android:layout_margin="10dp"
-                        android:layout_width="140dp"
-                        android:layout_height="195dp"
-                        android:src="@drawable/promo3" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="195dp"
+                            android:src="@drawable/promo3" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Leather Jacket"
+                            android:textColor="@color/grayPrimary"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 149.000"
+                            android:textColor="@color/grayPrimary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
                 </LinearLayout>
             </HorizontalScrollView>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
