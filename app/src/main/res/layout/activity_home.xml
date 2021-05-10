@@ -8,15 +8,13 @@
     tools:context=".HomeActivity">
 
     <ScrollView
-        android:scrollbars="none"
-        android:paddingBottom="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
         android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -28,7 +26,7 @@
                 android:id="@+id/view"
                 android:layout_width="match_parent"
                 android:layout_height="310dp"
-                android:background="@drawable/bg_gradient_primary_blue"
+                android:background="@drawable/backshop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -50,12 +48,14 @@
                 app:layout_constraintTop_toTopOf="@+id/view" />
 
             <com.github.florent37.shapeofview.shapes.CircleView
+                android:id="@+id/circleView"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="29dp"
                 android:layout_marginTop="85dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
+
                 <ImageView
                     android:id="@+id/pic_photo_home_user_circled"
                     android:layout_width="60dp"
@@ -64,6 +64,7 @@
             </com.github.florent37.shapeofview.shapes.CircleView>
 
             <TextView
+                android:id="@+id/tvNamaPengguna"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -74,6 +75,21 @@
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="@+id/textView2"
                 app:layout_constraintTop_toBottomOf="@id/textView2" />
+
+            <TextView
+                android:id="@+id/btnEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="48dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Edit Profile"
+                android:textColor="#edebeb"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/tvNamaPengguna"
+                app:layout_constraintHorizontal_bias="0.351"
+                app:layout_constraintStart_toEndOf="@+id/circleView"
+                app:layout_constraintTop_toBottomOf="@id/tvNamaPengguna" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -143,7 +159,7 @@
                         <ImageView
                             android:layout_width="80dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/jongki_man"/>
+                            android:src="@drawable/jongki_man" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -223,10 +239,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
             <HorizontalScrollView
-                android:layout_width="369dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="25dp"
                 android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -234,21 +250,62 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="225dp"
+                    android:layout_height="320dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="170dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="24dp"
-                        android:src="@drawable/iu_dress" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="195dp"
+                            android:src="@drawable/promo5" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Oversized Sweater"
+                            android:textColor="@color/grayPrimary"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 129.000"
+                            android:textColor="@color/grayPrimary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="195dp"
+                            android:src="@drawable/promo1" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sporty Suit"
+                            android:textColor="@color/grayPrimary"
+                            android:textSize="14sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 249.000"
+                            android:textColor="@color/grayPrimary"
+                            android:textSize="12sp" />
+                    </LinearLayout>
 
                     <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="15dp"
-                        android:src="@drawable/shoes" />
+                        android:layout_margin="10dp"
+                        android:layout_width="140dp"
+                        android:layout_height="195dp"
+                        android:src="@drawable/promo3" />
                 </LinearLayout>
             </HorizontalScrollView>
         </androidx.constraintlayout.widget.ConstraintLayout>
