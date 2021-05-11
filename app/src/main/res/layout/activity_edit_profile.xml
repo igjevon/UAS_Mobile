@@ -39,7 +39,7 @@
                 android:id="@+id/bg1"
                 android:layout_width="match_parent"
                 android:layout_height="303dp"
-                android:background="@drawable/bg_gradient_profile"
+                android:background="@drawable/bg_gradient_primary_blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -136,6 +136,42 @@
                         android:textSize="20sp" />
                     <EditText
                         android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_input_edit"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/password_label"
+                        android:textColor="@color/grayPrimary"
+                        android:textSize="20sp" />
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_input_edit"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/address_label"
+                        android:textColor="@color/grayPrimary"
+                        android:textSize="20sp" />
+                    <EditText
+                        android:id="@+id/address"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"

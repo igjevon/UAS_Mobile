@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgPrimary"
     tools:context=".ProductDetailsActivity">
     <ScrollView
         android:layout_width="match_parent"
@@ -78,6 +79,7 @@
                 android:layout_marginTop="12dp"
                 android:text="IDR 99.000"
                 android:textSize="20sp"
+                android:textColor="@color/brownPrimary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.774"
                 app:layout_constraintStart_toEndOf="@+id/title_detail1"
@@ -113,6 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:textColor="@color/graydark"
                     android:text="Size : S"
                     android:textSize="18sp" />
 
@@ -120,6 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:textColor="@color/graydark"
                     android:text="Material : Premium cotton"
                     android:textSize="18sp" />
 
@@ -127,12 +131,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:textColor="@color/graydark"
                     android:text="Bust : 90 cm"
                     android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/graydark"
                     android:layout_marginTop="4dp"
                     android:text="Length : 50 cm"
                     android:textSize="18sp" />
@@ -142,28 +148,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="Model : 178 cm/48 kg size S"
+                    android:textColor="@color/graydark"
                     android:textSize="18sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Care Instruction "
-                    android:textColor="@color/blackPrimary"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Wash with similar color"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Cold hand wash recommended"
+                    android:text="Care Instruction\nWash with similar color\nCold hand wash recommended"
+                    android:textColor="@color/graydark"
                     android:textSize="18sp" />
             </LinearLayout>
 
