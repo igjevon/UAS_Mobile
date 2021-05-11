@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".EditProfileAct"></activity>
+        <activity android:name=".LoungeWears_Activity"></activity>
+        <activity android:name=".Dresses_Activity" />
+        <activity android:name=".Bottoms_Activity" />
+        <activity android:name=".Tops_Activity" />
+        <activity android:name=".EditProfileAct" />
         <activity android:name=".SuccessBuyActivity" />
         <activity android:name=".ListProductActivity" />
         <activity android:name=".ProductDetailsActivity" />

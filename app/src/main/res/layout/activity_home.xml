@@ -149,6 +149,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView10">
 
                 <LinearLayout
+                    android:id="@+id/go_to_tops"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -176,6 +177,7 @@
                     </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/go_to_bottoms"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -202,6 +204,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/go_to_dresses"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -228,6 +231,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/go_to_loungewears"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
