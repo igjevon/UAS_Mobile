@@ -51,7 +51,6 @@ public class RegisterTwoAct extends AppCompatActivity {
         btn_back = findViewById(R.id.btn_back);
         btn_add_photo = findViewById(R.id.btn_add_photo);
         pic_photo_register_user = findViewById(R.id.pic_photo_register_user);
-        bio=findViewById(R.id.bio);
         nama_lengkap=findViewById(R.id.nama_lengkap);
 
         btn_add_photo.setOnClickListener(new View.OnClickListener() {
