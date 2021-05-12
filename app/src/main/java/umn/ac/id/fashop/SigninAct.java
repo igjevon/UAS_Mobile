@@ -41,6 +41,10 @@ public class SigninAct extends AppCompatActivity {
         btn_signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //ubah state menjadi loading
+                btn_signin.setEnabled(false);
+                btn_signin.setText("Loading ...");
+
                 final String username = xusername.getText().toString();
                 final String password = xpassword.getText().toString();
 
@@ -77,7 +81,7 @@ public class SigninAct extends AppCompatActivity {
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                        Toast.makeText(getApplicationContext(), "Database Error!", Toast.LENGTH_SHORT).show();
                     }
                 });
             }

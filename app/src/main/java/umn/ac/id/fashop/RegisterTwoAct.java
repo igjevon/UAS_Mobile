@@ -28,7 +28,7 @@ import com.squareup.picasso.Picasso;
 public class RegisterTwoAct extends AppCompatActivity {
     ImageView btn_back, pic_photo_register_user;
     Button btn_continue, btn_add_photo;
-    EditText bio, nama_lengkap;
+    EditText nama_lengkap, address;
 
     Uri photo_location;
     Integer photo_max = 1;
@@ -50,8 +50,10 @@ public class RegisterTwoAct extends AppCompatActivity {
         btn_continue=findViewById(R.id.btn_continue);
         btn_back = findViewById(R.id.btn_back);
         btn_add_photo = findViewById(R.id.btn_add_photo);
+
         pic_photo_register_user = findViewById(R.id.pic_photo_register_user);
-        nama_lengkap=findViewById(R.id.nama_lengkap);
+        nama_lengkap = findViewById(R.id.nama_lengkap);
+        address = findViewById(R.id.address);
 
         btn_add_photo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +87,7 @@ public class RegisterTwoAct extends AppCompatActivity {
                             String uri_photo = taskSnapshot.getMetadata().getReference().getDownloadUrl().toString();
                             reference.getRef().child("url_photo_profile").setValue(uri_photo);
                             reference.getRef().child("nama_lengkap").setValue(nama_lengkap.getText().toString());
-                            reference.getRef().child("bio").setValue(bio.getText().toString());
+                            reference.getRef().child("address").setValue(address.getText().toString());
                         }
                     }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
