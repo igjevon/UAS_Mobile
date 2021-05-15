@@ -9,4 +9,5 @@
     <string name="bio_label">Biodata</string>
     <string name="address_label">Address</string>
     <string name="explore">EXPLORE NOW</string>
+    <string name="phonenumber">Phone Number</string>
 </resources>
