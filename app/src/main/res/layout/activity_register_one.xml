@@ -157,7 +157,7 @@
                 android:id="@+id/btn_continue"
                 android:layout_width="167dp"
                 android:layout_height="40dp"
-                android:background="@color/redSecondary"
+                android:background="@color/brownPrimary"
                 android:gravity="center_horizontal|center_vertical"
                 android:text="CONTINUE"
                 android:textAlignment="center"
