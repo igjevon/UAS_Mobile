@@ -14,6 +14,7 @@ import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -26,7 +27,8 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 public class RegisterTwoAct extends AppCompatActivity {
-    ImageView btn_back, pic_photo_register_user;
+    LinearLayout btn_back;
+    ImageView pic_photo_register_user;
     Button btn_continue, btn_add_photo;
     EditText nama_lengkap, address;
 
@@ -48,7 +50,7 @@ public class RegisterTwoAct extends AppCompatActivity {
         getUsernameLocal();
 
         btn_continue=findViewById(R.id.btn_continue);
-        btn_back = findViewById(R.id.btn_back);
+        btn_back = findViewById(R.id.button_back);
         btn_add_photo = findViewById(R.id.btn_add_photo);
 
         pic_photo_register_user = findViewById(R.id.pic_photo_register_user);

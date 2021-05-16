@@ -113,6 +113,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layout_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
@@ -140,29 +141,54 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_email">
 
-            <ImageView
-                android:id="@+id/btn_back"
-                android:layout_width="89dp"
-                android:layout_height="40dp"
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/button_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_layout_grayprimary"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/button_back" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
-                android:layout_marginRight="15dp"
-                android:background="@color/grayPrimary"
-                android:src="@drawable/ic_baseline_arrow_back_24" />
+                android:layout_weight="3"
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btn_continue"
-                android:layout_width="167dp"
-                android:layout_height="40dp"
-                android:background="@color/redSecondary"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="CONTINUE"
-                android:textAlignment="center"
-                android:textColor="#FFF"
-                android:textSize="15sp" />
+                <Button
+                    android:id="@+id/btn_continue"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_layout_redthird"
+                    android:text="CONTINUE"
+                    android:textColor="#FFF"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,6 +31,8 @@ public class HomeActivity extends AppCompatActivity {
     ImageView pic_photo_home_user_circled;
     TextView tvNamaPengguna, user_balance;
 
+    TextView btnHistory;
+
     DatabaseReference reference;
 
     String USERNAME_KEY = "usernamekey";
@@ -47,6 +49,7 @@ public class HomeActivity extends AppCompatActivity {
         pic_photo_home_user_circled = findViewById(R.id.pic_photo_home_user_circled);
         tvNamaPengguna = findViewById(R.id.tvNamaPengguna);
         user_balance = findViewById(R.id.user_balance);
+        btnHistory = findViewById(R.id.btnHistory);
 
         reference = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(username_key_new);
@@ -99,6 +102,15 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gotoLoungeWearsIntent = new Intent(HomeActivity.this, LoungeWears_Activity.class);
                 startActivity(gotoLoungeWearsIntent);
+            }
+        });
+
+        btnHistory.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent gotoHistory = new Intent(HomeActivity.this, HistoryActivity.class);
+                startActivity(gotoHistory);
             }
         });
     }

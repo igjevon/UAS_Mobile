@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".LoungeWears_Activity"></activity>
+        <activity android:name=".MyHistoryDetailActivity"></activity>
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".LoungeWears_Activity" />
         <activity android:name=".Dresses_Activity" />
         <activity android:name=".Bottoms_Activity" />
         <activity android:name=".Tops_Activity" />
