@@ -167,6 +167,24 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:layout_marginTop="20dp"
+                        android:text="@string/phonenumber"
+                        android:textColor="@color/grayPrimary"
+                        android:textSize="20sp" />
+                    <EditText
+                        android:id="@+id/phonenumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_input_edit"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="20dp"
                         android:text="@string/address_label"
                         android:textColor="@color/grayPrimary"
                         android:textSize="20sp" />
@@ -182,23 +200,20 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
+            <Button
+                android:id="@+id/btn_continue"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
                 android:layout_marginTop="20dp"
-                app:layout_constraintTop_toBottomOf="@+id/kolom1">
-
-                <Button
-                    android:id="@+id/btn_continue"
-                    android:layout_width="167dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/bg_btn_blue_primary"
-                    android:text="CONTINUE"
-                    android:textAlignment="center"
-                    android:textColor="#FFF"
-                    android:textSize="15sp" />
-            </LinearLayout>
+                android:background="@color/brownPrimary"
+                android:text="CONTINUE"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="15sp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

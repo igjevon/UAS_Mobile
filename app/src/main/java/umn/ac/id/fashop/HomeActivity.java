@@ -29,9 +29,7 @@ public class HomeActivity extends AppCompatActivity {
     LinearLayout go_to_loungewears;
 
     ImageView pic_photo_home_user_circled;
-    TextView tvNamaPengguna, user_balance;
-
-    TextView btnHistory;
+    TextView tvNamaPengguna, user_balance, btnMyProfile;
 
     DatabaseReference reference;
 
@@ -49,7 +47,15 @@ public class HomeActivity extends AppCompatActivity {
         pic_photo_home_user_circled = findViewById(R.id.pic_photo_home_user_circled);
         tvNamaPengguna = findViewById(R.id.tvNamaPengguna);
         user_balance = findViewById(R.id.user_balance);
-        btnHistory = findViewById(R.id.btnHistory);
+        btnMyProfile = findViewById(R.id.btnViewProfile);
+
+        btnMyProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoViewProfile = new Intent(HomeActivity.this, MyProfileAct.class);
+                startActivity(gotoViewProfile);
+            }
+        });
 
         reference = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(username_key_new);
@@ -102,15 +108,6 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gotoLoungeWearsIntent = new Intent(HomeActivity.this, LoungeWears_Activity.class);
                 startActivity(gotoLoungeWearsIntent);
-            }
-        });
-
-        btnHistory.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent gotoHistory = new Intent(HomeActivity.this, HistoryActivity.class);
-                startActivity(gotoHistory);
             }
         });
     }

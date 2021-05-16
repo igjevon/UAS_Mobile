@@ -1,283 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blueProfile"
-    tools:context=".MyProfileAct">
+    android:background="@color/bgPrimary"
+    tools:context=".EditProfileAct">
 
-    <View
-        android:id="@+id/view"
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="303dp"
-        android:background="@drawable/backshop"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <View
-        android:id="@+id/bg1"
-        android:layout_width="match_parent"
-        android:layout_height="303dp"
-        android:background="@drawable/bg_gradient_profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blueProfile"
+            tools:context=".MyProfileAct">
 
-    <ImageView
-        android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/ic_baseline_arrow_back_ios_24"
-        app:layout_constraintTop_toTopOf="@+id/bg1"
-        app:layout_constraintStart_toStartOf="@id/bg1"
-        />
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="303dp"
+                android:background="@drawable/backshop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.037" />
 
-    <View
-        android:id="@+id/view3"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginTop="45dp"
-        android:background="@drawable/bg_view_circle_picture"
-        app:layout_constraintEnd_toEndOf="@+id/bg1"
-        app:layout_constraintStart_toStartOf="@id/bg1"
-        app:layout_constraintTop_toTopOf="@id/back" />
+            <View
+                android:id="@+id/bg1"
+                android:layout_width="match_parent"
+                android:layout_height="303dp"
+                android:background="@drawable/bg_gradient_primary_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="5dp"
-        android:src="@drawable/user1"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@id/bg1"
-        app:layout_constraintTop_toTopOf="@id/view3" />
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                app:layout_constraintStart_toStartOf="@id/bg1"
+                app:layout_constraintTop_toTopOf="@+id/bg1" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Song Jihyo"
-        android:textColor="#FFF"
-        android:textSize="20sp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@id/bg1"/>
+            <View
+                android:id="@+id/view3"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginTop="45dp"
+                android:background="@drawable/bg_view_circle_picture"
+                app:layout_constraintEnd_toEndOf="@+id/bg1"
+                app:layout_constraintStart_toStartOf="@id/bg1"
+                app:layout_constraintTop_toTopOf="@id/back" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="327dp"
-        android:layout_height="112dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/bg_layout_white"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.694"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"></LinearLayout>
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/user1"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@id/bg1"
+                app:layout_constraintTop_toTopOf="@id/view3" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="123dp"
-        android:layout_height="154dp"
-        android:src="@drawable/cart1"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Song Jihyo"
+                android:textColor="#FFF"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="@+id/view"
+                app:layout_constraintStart_toStartOf="@id/bg1"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:text="Shirt"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+            <LinearLayout
+                android:id="@+id/kolom1"
+                android:layout_width="377dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/bg_layout_white"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.694"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Ukuran S"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                <LinearLayout
+                    android:id="@+id/nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="51$"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/username_label"
+                        android:textColor="@color/grayPrimary"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="JiHyo"
+                        android:textColor="@color/blackPrimary"
+                        android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/minus"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toStartOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/email_label"
+                        android:textColor="@color/grayPrimary"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="jihyo@umn.ac.id"
+                        android:textColor="@color/blackPrimary"
+                        android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2"
-        android:textSize="15dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toStartOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/phonenumber"
+                        android:textColor="@color/grayPrimary"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="081213625839"
+                        android:textColor="@color/blackPrimary"
+                        android:textSize="20sp" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:src="@drawable/plus"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/address_label"
+                        android:textColor="@color/grayPrimary"
+                        android:textSize="20sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:text="Pohang, Gyeongsang Utara, Korea Selatan"
+                        android:textColor="@color/blackPrimary"
+                        android:textSize="20sp" />/>
+                </LinearLayout>
+            </LinearLayout>
 
-    //
-
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="327dp"
-        android:layout_height="112dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/bg_layout_white"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.722"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/shirt2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:text="Shirt"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout1" />
-
-    <TextView
-        android:id="@+id/ukuran2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Ukuran S"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/shirt2" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="51$"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/ukuran2" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="123dp"
-        android:layout_height="154dp"
-        android:src="@drawable/cart1"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout1"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout1"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout1"/>
-
-    <ImageView
-        android:id="@+id/minus2"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_marginEnd="10dp"
-        android:src="@drawable/minus"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout1"
-        app:layout_constraintEnd_toStartOf="@+id/text1"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout1" />
-
-    <TextView
-        android:id="@+id/text1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2"
-        android:layout_marginEnd="10dp"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout1"
-        app:layout_constraintEnd_toStartOf="@+id/plus2"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout1" />
-
-    <ImageView
-        android:id="@+id/plus2"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_marginEnd="30dp"
-        android:src="@drawable/plus"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout1"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout1"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout1" />
-
-
-    <Button
-        android:id="@+id/btn_explore"
-        android:layout_width="264dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/bg_btn_blue_primary"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="EDIT PROFILE"
-        android:textColor="#FFF"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
-        app:layout_constraintVertical_bias="0.061" />
-
-    <Button
-        android:id="@+id/btn_vieworder"
-        android:layout_width="264dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:background="#FFF"
-        android:layout_marginTop="5dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="SIGN OUT"
-        android:textColor="@color/brownPrimary"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_explore"
-        app:layout_constraintVertical_bias="0.152" />
+            <Button
+                android:id="@+id/btn_editprofile"
+                android:layout_width="337dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_btn_blue_primary"
+                android:text="EDIT PROFILE"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="15sp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kolom1"/>
+            <Button
+                android:id="@+id/btn_continue"
+                android:layout_width="337dp"
+                android:layout_height="40dp"
+                android:background="#FFF"
+                android:text="SIGN OUT"
+                android:textAlignment="center"
+                android:textColor="@color/brownPrimary"
+                android:textSize="15sp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_editprofile"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
