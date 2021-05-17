@@ -41,6 +41,7 @@
                 android:layout_height="303dp"
                 android:background="@drawable/bg_gradient_primary_blue"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -88,15 +89,14 @@
 
             <LinearLayout
                 android:id="@+id/kolom1"
-                android:layout_width="377dp"
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/bg_layout_white"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.694"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3">
 
@@ -113,11 +113,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
                         android:layout_marginTop="20dp"
+                        android:layout_marginBottom="12dp"
                         android:text="@string/username_label"
                         android:textColor="@color/grayPrimary"
                         android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -129,11 +130,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
                         android:layout_marginTop="20dp"
+                        android:layout_marginBottom="12dp"
                         android:text="@string/email_label"
                         android:textColor="@color/grayPrimary"
                         android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -145,11 +147,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
                         android:layout_marginTop="20dp"
+                        android:layout_marginBottom="12dp"
                         android:text="@string/phonenumber"
                         android:textColor="@color/grayPrimary"
                         android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -161,11 +164,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
                         android:layout_marginTop="20dp"
+                        android:layout_marginBottom="12dp"
                         android:text="@string/address_label"
                         android:textColor="@color/grayPrimary"
                         android:textSize="20sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -178,30 +182,33 @@
 
             <Button
                 android:id="@+id/btn_editprofile"
-                android:layout_width="337dp"
+                android:layout_width="150dp"
                 android:layout_height="40dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="12dp"
                 android:background="@drawable/bg_btn_blue_primary"
                 android:text="EDIT PROFILE"
                 android:textAlignment="center"
                 android:textColor="#FFF"
                 android:textSize="15sp"
-                android:layout_marginTop="20dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/kolom1"/>
+                app:layout_constraintTop_toBottomOf="@+id/kolom1" />
+
             <Button
                 android:id="@+id/btn_history"
-                android:layout_width="337dp"
+                android:layout_width="150dp"
                 android:layout_height="40dp"
-                android:background="#FFF"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_btn_blue_primary"
                 android:text="HISTORY"
                 android:textAlignment="center"
-                android:textColor="@color/brownPrimary"
+                android:textColor="@color/white"
                 android:textSize="15sp"
-                android:layout_marginTop="15dp"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_editprofile"/>
+                app:layout_constraintHorizontal_bias="0.317"
+                app:layout_constraintStart_toEndOf="@+id/btn_editprofile"
+                app:layout_constraintTop_toBottomOf="@+id/kolom1" />
+
             <Button
                 android:id="@+id/btn_continue"
                 android:layout_width="337dp"
@@ -209,7 +216,7 @@
                 android:background="#FFF"
                 android:text="SIGN OUT"
                 android:textAlignment="center"
-                android:textColor="@color/brownPrimary"
+                android:textColor="@drawable/bg_btn_white"
                 android:textSize="15sp"
                 android:layout_marginTop="15dp"
                 app:layout_constraintStart_toStartOf="parent"
