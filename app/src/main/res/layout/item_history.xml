@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:layout_marginBottom="12dp">
     <LinearLayout
-        android:id="@+id/linearLayoutCheckOut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -28,7 +27,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="160dp"
-                android:text="January 22, 2018"
                 android:textColor="@color/blackPrimary"
                 android:textSize="10sp"
                 android:fontFamily="@font/montserrat_regular"/>
@@ -37,7 +35,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="Quilted White Blouse"
                 android:textColor="@color/blackPrimary"
                 android:textSize="22sp"
                 android:fontFamily="@font/montserrat_semibold"/>
@@ -69,7 +66,6 @@
                     android:layout_marginTop="2dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"
                     android:textSize="20sp"
                     android:textColor="@color/grayPrimary"
                     android:fontFamily="@font/montserrat_regular"/>
@@ -82,7 +78,6 @@
                 android:layout_marginLeft="132dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/montserrat_regular"
-                android:text="IDR 99.000"
                 android:textColor="@color/grayPrimary"
                 android:textSize="20sp" />
 
@@ -101,7 +96,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="70dp"
-                    android:text="IDR 99.000"
                     android:textSize="20sp"
                     android:textColor="@color/grayPrimary"
                     android:fontFamily="@font/montserrat_regular"/>

@@ -37,6 +37,8 @@ public class HomeActivity extends AppCompatActivity {
     String username_key = "";
     String username_key_new = "";
 
+    TextView btnHistory;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +50,16 @@ public class HomeActivity extends AppCompatActivity {
         tvNamaPengguna = findViewById(R.id.tvNamaPengguna);
         user_balance = findViewById(R.id.user_balance);
         btnMyProfile = findViewById(R.id.btnViewProfile);
+        btnHistory = findViewById(R.id.btnHistory);
+
+        btnHistory.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent gotoHistory = new Intent(HomeActivity.this, HistoryActivity.class);
+                startActivity(gotoHistory);
+            }
+        });
 
         btnMyProfile.setOnClickListener(new View.OnClickListener() {
             @Override

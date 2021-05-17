@@ -31,7 +31,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.xnama_barang.setText(myHistory.get(position).getNama_barang());
         holder.xjumlah.setText(myHistory.get(position).getJumlah());
-        holder.xharga.setText(myHistory.get(position).getHarga());
+        holder.xharga.setText(Integer.toString(myHistory.get(position).getHarga()));
         holder.xtanggal_order.setText(myHistory.get(position).getTanggal_order());
 
         final String getNamaBarang = myHistory.get(position).getNama_barang();

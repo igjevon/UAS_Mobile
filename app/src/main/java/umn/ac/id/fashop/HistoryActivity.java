@@ -75,9 +75,9 @@ public class HistoryActivity extends AppCompatActivity {
                 for(DataSnapshot dataSnapshot1: snapshot.getChildren()){
                     MyHistory p = dataSnapshot1.getValue(MyHistory.class);
                     list.add(p);
+                    historyAdapter = new HistoryAdapter(HistoryActivity.this, list);
+                    my_belanjaan.setAdapter(historyAdapter);
                 }
-                historyAdapter = new HistoryAdapter(HistoryActivity.this, list);
-                my_belanjaan.setAdapter(historyAdapter);
             }
 
             @Override
