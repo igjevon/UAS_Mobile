@@ -106,8 +106,8 @@ public class HomeActivity extends AppCompatActivity {
         btnMyProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoViewProfile = new Intent(HomeActivity.this, MyProfileAct.class);
-                startActivity(gotoViewProfile);
+                Intent gotoviewprofileuser = new Intent(HomeActivity.this, MyProfileAct.class);
+                startActivity(gotoviewprofileuser);
             }
         });
     }

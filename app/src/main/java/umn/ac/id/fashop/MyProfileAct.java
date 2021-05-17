@@ -6,11 +6,14 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MyProfileAct extends AppCompatActivity {
-    Button edit_profile, btn_continue;
+    Button edit_profile, btn_continue, btn_history;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_profile);
+
+        edit_profile = findViewById(R.id.btn_editprofile);
+        btn_continue = findViewById(R.id.btn_continue);
     }
 }
