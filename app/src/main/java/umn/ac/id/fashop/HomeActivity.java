@@ -49,14 +49,6 @@ public class HomeActivity extends AppCompatActivity {
         user_balance = findViewById(R.id.user_balance);
         btnMyProfile = findViewById(R.id.btnViewProfile);
 
-        btnMyProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoViewProfile = new Intent(HomeActivity.this, MyProfileAct.class);
-                startActivity(gotoViewProfile);
-            }
-        });
-
         reference = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(username_key_new);
 
@@ -108,6 +100,14 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gotoLoungeWearsIntent = new Intent(HomeActivity.this, LoungeWears_Activity.class);
                 startActivity(gotoLoungeWearsIntent);
+            }
+        });
+
+        btnMyProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoViewProfile = new Intent(HomeActivity.this, MyProfileAct.class);
+                startActivity(gotoViewProfile);
             }
         });
     }
