@@ -11,6 +11,7 @@
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".MyHistoryDetailActivity"></activity>
         <activity android:name=".HistoryActivity" />
+        <activity android:name=".MyProfileAct" />
         <activity android:name=".LoungeWears_Activity" />
         <activity android:name=".Dresses_Activity" />
         <activity android:name=".Bottoms_Activity" />

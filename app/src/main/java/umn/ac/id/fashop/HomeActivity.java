@@ -61,14 +61,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        btnMyProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoViewProfile = new Intent(HomeActivity.this, MyProfileAct.class);
-                startActivity(gotoViewProfile);
-            }
-        });
-
         reference = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(username_key_new);
 
@@ -120,6 +112,14 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gotoLoungeWearsIntent = new Intent(HomeActivity.this, LoungeWears_Activity.class);
                 startActivity(gotoLoungeWearsIntent);
+            }
+        });
+
+        btnMyProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoviewprofileuser = new Intent(HomeActivity.this, MyProfileAct.class);
+                startActivity(gotoviewprofileuser);
             }
         });
     }

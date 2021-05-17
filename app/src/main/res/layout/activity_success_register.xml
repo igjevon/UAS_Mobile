@@ -16,7 +16,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="132dp"
         android:layout_marginEnd="8dp"
-        android:src="@drawable/success"
+        android:src="@drawable/successregister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:lineSpacingExtra="2dp"
-        android:text="Your order will be delivered soon.\nThank you for choosing our app !"
+        android:text="Congratulations, your account \nhas been successfully created."
         android:textAlignment="center"
         android:textColor="@color/blackPrimary"
         android:textSize="10sp"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textSuccess"/>
 
     <Button
-        android:id="@+id/btn_explore"
+        android:id="@+id/btn_successregister"
         android:layout_width="264dp"
         android:layout_height="45dp"
         android:layout_marginLeft="24dp"
@@ -62,7 +62,7 @@
         android:layout_marginRight="24dp"
         android:background="@drawable/bg_btn_blue_primary"
         android:gravity="center_vertical|center_horizontal"
-        android:text="CONTINUE"
+        android:text="EXPLORE NOW"
         android:textColor="#FFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,23 +71,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewLet"
         app:layout_constraintVertical_bias="0.061" />
-
-    <Button
-        android:id="@+id/btn_vieworder"
-        android:layout_width="264dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
-        android:background="#FFF"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="VIEW ORDER"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_explore"
-        app:layout_constraintVertical_bias="0.152" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

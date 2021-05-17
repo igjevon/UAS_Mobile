@@ -25,6 +25,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
+import android.util.Log;
 
 public class RegisterTwoAct extends AppCompatActivity {
     LinearLayout btn_back;
@@ -97,6 +98,7 @@ public class RegisterTwoAct extends AppCompatActivity {
                             //berpindah activity
                             Intent gotosuccess = new Intent(RegisterTwoAct.this, HomeActivity.class);
                             startActivity(gotosuccess);
+                            Log.d("fail","failed button");
                         }
                     });
                 }

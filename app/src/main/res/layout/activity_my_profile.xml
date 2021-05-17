@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgPrimary"
-    tools:context=".EditProfileAct">
+    tools:context=".MyProfileAct">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -189,6 +189,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/kolom1"/>
+            <Button
+                android:id="@+id/btn_history"
+                android:layout_width="337dp"
+                android:layout_height="40dp"
+                android:background="#FFF"
+                android:text="HISTORY"
+                android:textAlignment="center"
+                android:textColor="@color/brownPrimary"
+                android:textSize="15sp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_editprofile"/>
             <Button
                 android:id="@+id/btn_continue"
                 android:layout_width="337dp"
