@@ -31,18 +31,16 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.xnama_barang.setText(myHistory.get(position).getNama_barang());
         holder.xjumlah.setText(myHistory.get(position).getJumlah());
-        holder.xharga.setText(Integer.toString(myHistory.get(position).getHarga()));
+        holder.xharga.setText("IDR " + Integer.toString(myHistory.get(position).getHarga()));
         holder.xtanggal_order.setText(myHistory.get(position).getTanggal_order());
+        holder.xukuran.setText(myHistory.get(position).getUkuran());
 
         final String getNamaBarang = myHistory.get(position).getNama_barang();
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent goToHistoryOrderDetails = new Intent(context, MyHistoryDetailActivity.class);
-                goToHistoryOrderDetails.putExtra("nama_barang", getNamaBarang);
-                context.startActivity(goToHistoryOrderDetails);
-            }
+        holder.itemView.setOnClickListener(v -> {
+            Intent goToHistoryOrderDetails = new Intent(context, MyHistoryDetailActivity.class);
+            goToHistoryOrderDetails.putExtra("nama_barang", getNamaBarang);
+            context.startActivity(goToHistoryOrderDetails);
         });
     }
 
@@ -52,13 +50,14 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView xnama_barang, xjumlah, xharga, xtanggal_order;
+        TextView xnama_barang, xjumlah, xharga, xtanggal_order, xukuran;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             xnama_barang = itemView.findViewById(R.id.xnama_barang);
             xjumlah = itemView.findViewById(R.id.xjumlah);
             xharga = itemView.findViewById(R.id.xharga);
             xtanggal_order = itemView.findViewById(R.id.xtanggal_order);
+            xukuran = itemView.findViewById(R.id.xukuran);
         }
     }
 }
