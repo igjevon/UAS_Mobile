@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -89,28 +90,33 @@ public class HomeActivity extends AppCompatActivity {
         go_to_tops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoTopsIntent = new Intent(HomeActivity.this, Tops_Activity.class);
+                Intent gotoTopsIntent = new Intent(HomeActivity.this, ListProductActivity.class);
+                //Meletakkan data kepada intent
+                gotoTopsIntent.putExtra("list_produk", "Tops");
                 startActivity(gotoTopsIntent);
             }
         });
         go_to_bottoms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoBottomsIntent = new Intent(HomeActivity.this, Bottoms_Activity.class);
+                Intent gotoBottomsIntent = new Intent(HomeActivity.this, ListProductActivity.class);
+                gotoBottomsIntent.putExtra("list_produk", "Bottoms");
                 startActivity(gotoBottomsIntent);
             }
         });
         go_to_dresses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoDressesIntent = new Intent(HomeActivity.this, Dresses_Activity.class);
+                Intent gotoDressesIntent = new Intent(HomeActivity.this, ListProductActivity.class);
+                gotoDressesIntent.putExtra("list_produk", "Dresses");
                 startActivity(gotoDressesIntent);
             }
         });
         go_to_loungewears.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoLoungeWearsIntent = new Intent(HomeActivity.this, LoungeWears_Activity.class);
+                Intent gotoLoungeWearsIntent = new Intent(HomeActivity.this, ListProductActivity.class);
+                gotoLoungeWearsIntent.putExtra("list_produk", "Lounges");
                 startActivity(gotoLoungeWearsIntent);
             }
         });
@@ -128,5 +134,4 @@ public class HomeActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
         username_key_new = sharedPreferences.getString(username_key, "");
     }
-
 }
