@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.PointerIcon;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -29,8 +30,9 @@ public class HomeActivity extends AppCompatActivity {
     LinearLayout go_to_dresses;
     LinearLayout go_to_loungewears;
 
-    ImageView pic_photo_home_user_circled;
-    TextView tvNamaPengguna, user_balance, btnMyProfile;
+    ImageView pic_photo_home_user_circled, chat;
+    TextView tvNamaPengguna, user_balance;
+    TextView go_to_profile;
 
     DatabaseReference reference;
 
@@ -50,8 +52,9 @@ public class HomeActivity extends AppCompatActivity {
         pic_photo_home_user_circled = findViewById(R.id.pic_photo_home_user_circled);
         tvNamaPengguna = findViewById(R.id.tvNamaPengguna);
         user_balance = findViewById(R.id.user_balance);
-        btnMyProfile = findViewById(R.id.btnViewProfile);
         btnHistory = findViewById(R.id.btnHistory);
+        chat = findViewById(R.id.chat);
+        go_to_profile = findViewById(R.id.go_to_profile);
 
         btnHistory.setOnClickListener(new View.OnClickListener(){
 
@@ -121,11 +124,19 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        btnMyProfile.setOnClickListener(new View.OnClickListener() {
+        chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoviewprofileuser = new Intent(HomeActivity.this, MyProfileAct.class);
-                startActivity(gotoviewprofileuser);
+                Intent gotochat = new Intent(HomeActivity.this, ChatActivity.class);
+                startActivity(gotochat);
+            }
+        });
+
+        go_to_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotomyProfile = new Intent(HomeActivity.this, Profile1.class);
+                startActivity(gotomyProfile);
             }
         });
     }

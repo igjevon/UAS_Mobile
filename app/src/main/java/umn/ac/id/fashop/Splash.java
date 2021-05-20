@@ -15,7 +15,6 @@ import android.widget.TextView;
 public class Splash extends AppCompatActivity {
     Animation app_splash;
     ImageView app_logo;
-    TextView app_subtext;
     View bg1,bg2;
 
     @Override
