@@ -195,7 +195,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/kolom1" />
 
             <Button
-                android:id="@+id/btn_continue"
+                android:id="@+id/btn_signout"
                 android:layout_width="330dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="24dp"
