@@ -21,7 +21,7 @@ import com.squareup.picasso.Picasso;
 public class Profile1 extends AppCompatActivity {
     Button edit_profile, btn_signout, btn_history;
     ImageView back;
-    TextView username, password, nama_lengkap, address, phonenumber;
+    TextView username,nama_lengkap, address, phone_number, email_address;
     ImageView photo_profile;
 
     DatabaseReference reference;
@@ -43,11 +43,11 @@ public class Profile1 extends AppCompatActivity {
         btn_history = findViewById(R.id.btn_history);
 
         username = findViewById(R.id.username);
-        password = findViewById(R.id.password);
         address = findViewById(R.id.address);
-        phonenumber = findViewById(R.id.phonenumber);
+        phone_number = findViewById(R.id.phone_number);
         nama_lengkap = findViewById(R.id.nama_lengkap);
         photo_profile = findViewById(R.id.photo_profile);
+        email_address = findViewById(R.id.email_address);
 
         reference = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(username_key_new);
@@ -57,9 +57,9 @@ public class Profile1 extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 nama_lengkap.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
                 username.setText(dataSnapshot.child("username").getValue().toString());
-                password.setText(dataSnapshot.child("password").getValue().toString());
-                phonenumber.setText(dataSnapshot.child("phone_number").getValue().toString());
+                phone_number.setText(dataSnapshot.child("phone_number").getValue().toString());
                 address.setText(dataSnapshot.child("address").getValue().toString());
+                email_address.setText(dataSnapshot.child("email_address").getValue().toString());
                 Picasso.with(Profile1.this)
                         .load(dataSnapshot.child("url_photo_profile")
                                 .getValue().toString()).centerCrop().fit()
