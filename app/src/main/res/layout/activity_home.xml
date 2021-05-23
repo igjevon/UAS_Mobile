@@ -196,12 +196,12 @@
                     android:clickable="true"
                     android:padding="10dp">
                     <androidx.cardview.widget.CardView
-                        android:layout_width="130dp"
+                        android:layout_width="129dp"
                         android:layout_height="match_parent"
                         app:cardCornerRadius="8dp"
                         android:elevation="10dp">
                         <ImageView
-                            android:layout_width="130dp"
+                            android:layout_width="129dp"
                             android:layout_height="195dp"
                             android:src="@drawable/xbottom" />
                     </androidx.cardview.widget.CardView>
