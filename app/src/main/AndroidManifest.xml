@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:largeHeap="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Profile1"/>
+        <activity android:name=".Profile1" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".MyHistoryDetailActivity" />
         <activity android:name=".HistoryActivity" />

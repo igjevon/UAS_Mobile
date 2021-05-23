@@ -1,5 +1,6 @@
 package umn.ac.id.fashop;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,14 +9,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class Profile1 extends AppCompatActivity {
     Button edit_profile, btn_signout, btn_history;
     ImageView back;
+    TextView username, password, address, phonenumber, name;
+    ImageView pic_photo_home_user_circled;
 
     DatabaseReference reference, reference2;
+
     String USERNAME_KEY = "usernamekey";
     String username_key = "";
     String username_key_new = "";
@@ -25,10 +35,43 @@ public class Profile1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile1);
 
+        getUsernameLocal();
+
         edit_profile = findViewById(R.id.btn_editprofile);
         btn_signout = findViewById(R.id.btn_signout);
         back = findViewById(R.id.back);
         btn_history = findViewById(R.id.btn_history);
+
+        username = findViewById(R.id.username);
+        password = findViewById(R.id.password);
+        address = findViewById(R.id.address);
+        phonenumber = findViewById(R.id.phonenumber);
+        name = findViewById(R.id.nama_lengkap);
+        pic_photo_home_user_circled = findViewById(R.id.pic_photo_home_user_circled);
+
+        reference = FirebaseDatabase.getInstance().getReference()
+                .child("Users").child(username_key_new);
+
+        reference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                name.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
+                username.setText(dataSnapshot.child("username").getValue().toString());
+                password.setText(dataSnapshot.child("password").getValue().toString());
+                phonenumber.setText(dataSnapshot.child("phone_number").getValue().toString());
+                address.setText(dataSnapshot.child("address").getValue().toString());
+                Picasso.with(Profile1.this)
+                        .load(dataSnapshot.child("url_photo_profile")
+                                .getValue().toString()).centerCrop().fit()
+                        .into(pic_photo_home_user_circled);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
         edit_profile.setOnClickListener(new View.OnClickListener() {
             @Override
