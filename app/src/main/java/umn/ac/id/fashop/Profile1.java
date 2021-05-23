@@ -21,10 +21,10 @@ import com.squareup.picasso.Picasso;
 public class Profile1 extends AppCompatActivity {
     Button edit_profile, btn_signout, btn_history;
     ImageView back;
-    TextView username, password, address, phonenumber, name;
-    ImageView pic_photo_home_user_circled;
+    TextView username, password, nama_lengkap, address, phonenumber;
+    ImageView photo_profile;
 
-    DatabaseReference reference, reference2;
+    DatabaseReference reference;
 
     String USERNAME_KEY = "usernamekey";
     String username_key = "";
@@ -46,8 +46,8 @@ public class Profile1 extends AppCompatActivity {
         password = findViewById(R.id.password);
         address = findViewById(R.id.address);
         phonenumber = findViewById(R.id.phonenumber);
-        name = findViewById(R.id.nama_lengkap);
-        pic_photo_home_user_circled = findViewById(R.id.pic_photo_home_user_circled);
+        nama_lengkap = findViewById(R.id.nama_lengkap);
+        photo_profile = findViewById(R.id.photo_profile);
 
         reference = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(username_key_new);
@@ -55,7 +55,7 @@ public class Profile1 extends AppCompatActivity {
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                name.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
+                nama_lengkap.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
                 username.setText(dataSnapshot.child("username").getValue().toString());
                 password.setText(dataSnapshot.child("password").getValue().toString());
                 phonenumber.setText(dataSnapshot.child("phone_number").getValue().toString());
@@ -63,7 +63,7 @@ public class Profile1 extends AppCompatActivity {
                 Picasso.with(Profile1.this)
                         .load(dataSnapshot.child("url_photo_profile")
                                 .getValue().toString()).centerCrop().fit()
-                        .into(pic_photo_home_user_circled);
+                        .into(photo_profile);
             }
 
             @Override
