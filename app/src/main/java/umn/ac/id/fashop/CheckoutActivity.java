@@ -25,9 +25,9 @@ import java.util.Random;
 
 public class CheckoutActivity extends AppCompatActivity {
     Button payNow, btn_plus, btn_minus;
-    TextView nama_produk, size, harga;
+    TextView nama_barang, ukuran, harga;
     TextView texttotalharga, textmybalance, textjumlahproduk;
-    ImageView notice_uang, image_produk;
+    ImageView notice_uang, url_product_image1;
 
     Integer valuejumlahproduk = 1;
     Integer mybalance = 800;
@@ -61,10 +61,10 @@ public class CheckoutActivity extends AppCompatActivity {
 //        notice_uang = findViewById(R.id.notice_uang);
         payNow = findViewById(R.id.payNow);
 
-        nama_produk = findViewById(R.id.nama_produk);
-        size = findViewById(R.id.size);
+        nama_barang = findViewById(R.id.nama_barang);
+        ukuran = findViewById(R.id.ukuran);
         harga = findViewById(R.id.harga);
-        image_produk = findViewById(R.id.image_produk);
+        url_product_image1 = findViewById(R.id.url_product_image1);
 
         texttotalharga = findViewById(R.id.texttotalharga);
         textmybalance = findViewById(R.id.textmybalance);
@@ -101,13 +101,13 @@ public class CheckoutActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 //Menimpa data yang ada dengan data yang baru
-                nama_produk.setText(dataSnapshot.child("nama_produk").getValue().toString());
-                size.setText(dataSnapshot.child("size").getValue().toString());
+                nama_barang.setText(dataSnapshot.child("nama_produk").getValue().toString());
+                ukuran.setText(dataSnapshot.child("size").getValue().toString());
                 valuehargaproduk = Integer.valueOf(dataSnapshot.child("harga").getValue().toString());
                 Picasso.with(CheckoutActivity.this)
                         .load(dataSnapshot.child("image1")
                                 .getValue().toString()).centerCrop().fit()
-                        .into(image_produk);
+                        .into(url_product_image1);
                 valuetotalharga = valuehargaproduk * valuejumlahproduk;
                 texttotalharga.setText("Rp " + valuetotalharga+"");
             }
@@ -166,13 +166,13 @@ public class CheckoutActivity extends AppCompatActivity {
                 //Menyimpan data user kepada firebase dan membuat table baru "MyProducts"
                 reference3 = FirebaseDatabase.getInstance()
                         .getReference().child("MyProducts")
-                        .child(username_key_new).child(nama_produk.getText().toString() + nomor_transaksi);
+                        .child(username_key_new).child(nama_barang.getText().toString() + nomor_transaksi);
                 reference3.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        reference3.getRef().child("id_produk").setValue(nama_produk.getText().toString() + nomor_transaksi);
-                        reference3.getRef().child("nama_produk").setValue(nama_produk.getText().toString());
-                        reference3.getRef().child("size").setValue(size);
+                        reference3.getRef().child("id_barang").setValue(nama_barang.getText().toString() + nomor_transaksi);
+                        reference3.getRef().child("nama_barang").setValue(nama_barang.getText().toString());
+                        reference3.getRef().child("ukuran").setValue(ukuran);
                         reference3.getRef().child("jumlah_produk").setValue(valuejumlahproduk);
 
                         Intent successBuyIntent = new Intent(CheckoutActivity.this, SuccessBuyActivity.class);

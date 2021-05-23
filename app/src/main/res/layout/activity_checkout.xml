@@ -43,7 +43,7 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/tv_myBag">
         <ImageView
-            android:id="@+id/image_produk"
+            android:id="@+id/url_product_image1"
             android:layout_width="103dp"
             android:layout_height="157dp"
             android:src="@drawable/detail1" />
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
-                android:id="@+id/nama_produk"
+                android:id="@+id/nama_barang"
                 android:layout_marginLeft="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                 android:layout_margin="10dp"
                 android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/size"
+                    android:id="@+id/ukuran"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="1dp"
