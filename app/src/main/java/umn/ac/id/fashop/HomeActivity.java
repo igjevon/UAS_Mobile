@@ -40,8 +40,6 @@ public class HomeActivity extends AppCompatActivity {
     String username_key = "";
     String username_key_new = "";
 
-    TextView btnHistory;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,18 +50,8 @@ public class HomeActivity extends AppCompatActivity {
         pic_photo_home_user_circled = findViewById(R.id.pic_photo_home_user_circled);
         tvNamaPengguna = findViewById(R.id.tvNamaPengguna);
         user_balance = findViewById(R.id.user_balance);
-        btnHistory = findViewById(R.id.btnHistory);
         chat = findViewById(R.id.chat);
         go_to_profile = findViewById(R.id.go_to_profile);
-
-        btnHistory.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Intent gotoHistory = new Intent(HomeActivity.this, HistoryActivity.class);
-                startActivity(gotoHistory);
-            }
-        });
 
         reference = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(username_key_new);

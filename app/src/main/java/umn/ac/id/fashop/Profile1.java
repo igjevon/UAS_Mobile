@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import com.google.firebase.database.DatabaseReference;
 
 public class Profile1 extends AppCompatActivity {
-    Button edit_profile, btn_signout;
+    Button edit_profile, btn_signout, btn_history;
     ImageView back;
 
     DatabaseReference reference, reference2;
@@ -28,6 +28,7 @@ public class Profile1 extends AppCompatActivity {
         edit_profile = findViewById(R.id.btn_editprofile);
         btn_signout = findViewById(R.id.btn_signout);
         back = findViewById(R.id.back);
+        btn_history = findViewById(R.id.btn_history);
 
         edit_profile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +60,14 @@ public class Profile1 extends AppCompatActivity {
                 Intent gotosignout = new Intent(Profile1.this, SigninAct.class);
                 startActivity(gotosignout);
                 finish(); //agar tidak bisa kembali ke myprofile
+            }
+        });
+
+        btn_history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoHistory = new Intent(Profile1.this, HistoryActivity.class);
+                startActivity(gotoHistory);
             }
         });
     }

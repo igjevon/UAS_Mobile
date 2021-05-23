@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -23,9 +24,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class HistoryActivity extends AppCompatActivity {
-    LinearLayout item_MyHistory;
-    TextView nama_pengguna;
-    ImageView profile_photo;
+    LinearLayout item_MyHistory, button_back;
+    Button gotoHome;
 
     DatabaseReference reference, reference2;
 
@@ -45,28 +45,12 @@ public class HistoryActivity extends AppCompatActivity {
         getUsernameLocal();
 
         item_MyHistory = findViewById(R.id.item_MyHistory);
-        nama_pengguna = findViewById(R.id.tvNamaPengguna);
-        profile_photo = findViewById(R.id.profile_photo);
+        button_back = findViewById(R.id.button_back);
+        gotoHome = findViewById(R.id.gotoHome);
 
         my_belanjaan = findViewById(R.id.my_belanjaan);
         my_belanjaan.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<MyHistory>();
-        reference = FirebaseDatabase.getInstance().getReference().child("Users").child(username_key_new);
-        reference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                nama_pengguna.setText(snapshot.child("nama_lengkap").getValue().toString());
-                Picasso.with(HistoryActivity.this)
-                        .load(snapshot.child("url_photo_profile")
-                                .getValue().toString()).centerCrop().fit()
-                        .into(profile_photo);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
 
         reference2 = FirebaseDatabase.getInstance().getReference().child("MyHistory").child(username_key_new);
         reference2.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -84,6 +68,16 @@ public class HistoryActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
+        });
+
+        button_back.setOnClickListener(v -> {
+            Intent gobackprofile = new Intent(HistoryActivity.this, Profile1.class);
+            startActivity(gobackprofile);
+        });
+
+        gotoHome.setOnClickListener(v -> {
+            Intent gotoHome = new Intent(HistoryActivity.this, HomeActivity.class);
+            startActivity(gotoHome);
         });
     }
     public void getUsernameLocal(){
