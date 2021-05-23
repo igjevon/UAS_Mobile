@@ -39,28 +39,77 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/imageViewDetail1"
+                        android:id="@+id/url_product_image1"
                         android:layout_width="218dp"
                         android:layout_height="326dp"
                         android:src="@drawable/detail1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
                     <ImageView
-                        android:id="@+id/imageView3"
+                        android:id="@+id/url_product_image2"
                         android:layout_width="218dp"
                         android:layout_height="326dp"
                         android:layout_marginEnd="16dp"
                         android:src="@drawable/detail2"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toEndOf="@+id/imageViewDetail1"
+                        app:layout_constraintStart_toEndOf="@+id/url_product_image1"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/url_product_image3"
+                        android:layout_width="218dp"
+                        android:layout_height="326dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/detail2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/url_product_image2"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/url_product_image4"
+                        android:layout_width="218dp"
+                        android:layout_height="326dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/detail2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/url_product_image3"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/url_product_image5"
+                        android:layout_width="218dp"
+                        android:layout_height="326dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/detail2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/url_product_image4"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/url_product_image6"
+                        android:layout_width="218dp"
+                        android:layout_height="326dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/detail2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/url_product_image5"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/url_product_image7"
+                        android:layout_width="218dp"
+                        android:layout_height="326dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/detail2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/url_product_image6"
                         app:layout_constraintTop_toTopOf="parent" />
                 </LinearLayout>
             </HorizontalScrollView>
 
             <TextView
-                android:id="@+id/nama_produk"
+                android:id="@+id/nama_barang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -82,7 +131,7 @@
                 android:textColor="@color/brownPrimary"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.774"
-                app:layout_constraintStart_toEndOf="@+id/nama_produk"
+                app:layout_constraintStart_toEndOf="@+id/nama_barang"
                 app:layout_constraintTop_toBottomOf="@+id/productDetails_view" />
 
             <LinearLayout
@@ -96,7 +145,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nama_produk"
+                app:layout_constraintTop_toBottomOf="@+id/nama_barang"
                 app:layout_constraintVertical_bias="0.06">
 
                 <TextView
@@ -112,7 +161,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/title_detail1" />
 
                 <TextView
-                    android:id="@+id/size"
+                    android:id="@+id/ukuran"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -121,7 +170,7 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/material"
+                    android:id="@+id/bahan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -130,7 +179,7 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/bust"
+                    android:id="@+id/ld"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -139,7 +188,7 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/length"
+                    android:id="@+id/lengan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/graydark"
@@ -148,7 +197,7 @@
                     android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/model"
+                    android:id="@+id/panjang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"

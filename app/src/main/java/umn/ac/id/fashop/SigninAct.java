@@ -61,14 +61,14 @@ public class SigninAct extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Username kosong!", Toast.LENGTH_SHORT).show();
                     //ubah state menjadi loading
                     btn_signin.setEnabled(true);
-                    btn_signin.setText("Sign In");
+                    btn_signin.setText("SIGN IN");
                 }
                  else {
                      if(password.isEmpty()){
                         Toast.makeText(getApplicationContext(), "Password kosong!", Toast.LENGTH_SHORT).show();
                         //ubah state menjadi loading
                         btn_signin.setEnabled(true);
-                        btn_signin.setText("Sign In");
+                        btn_signin.setText("SIGN IN");
                     }
                     else {
                          reference = FirebaseDatabase.getInstance().getReference()
@@ -97,14 +97,14 @@ public class SigninAct extends AppCompatActivity {
                                          Toast.makeText(getApplicationContext(), "Password salah", Toast.LENGTH_SHORT).show();
                                          //ubah state menjadi loading
                                          btn_signin.setEnabled(true);
-                                         btn_signin.setText("Sign In");
+                                         btn_signin.setText("SIGN IN");
                                      }
                                  }
                                  else {
                                      Toast.makeText(getApplicationContext(), "Username tidak ada", Toast.LENGTH_SHORT).show();
                                      //ubah state menjadi loading
                                      btn_signin.setEnabled(true);
-                                     btn_signin.setText("Sign In");
+                                     btn_signin.setText("SIGN IN");
                                  }
                              }
 

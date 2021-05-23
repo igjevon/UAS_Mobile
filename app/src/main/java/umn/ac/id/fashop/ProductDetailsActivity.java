@@ -20,8 +20,9 @@ import com.squareup.picasso.Picasso;
 
 public class ProductDetailsActivity extends AppCompatActivity {
     Button addToCart;
-    TextView nama_produk, harga, size, material, bust, length, model, instruction;
-    ImageView imageViewDetail1, imageView3;
+    TextView nama_barang, harga, ukuran, bahan, ld, lengan, panjang, instruction;
+    ImageView url_product_image1, url_product_image2, url_product_image3,
+            url_product_image4, url_product_image5, url_product_image6, url_product_image7;
     LinearLayout button_back;
 
     DatabaseReference reference;
@@ -33,16 +34,21 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
         button_back = findViewById(R.id.button_back);
 
-        imageViewDetail1 = findViewById(R.id.imageViewDetail1);
-        imageView3 = findViewById(R.id.imageView3);
+        url_product_image1 = findViewById(R.id.url_product_image1);
+        url_product_image2 = findViewById(R.id.url_product_image2);
+        url_product_image3 = findViewById(R.id.url_product_image3);
+        url_product_image4 = findViewById(R.id.url_product_image4);
+        url_product_image5 = findViewById(R.id.url_product_image5);
+        url_product_image6 = findViewById(R.id.url_product_image6);
+        url_product_image7 = findViewById(R.id.url_product_image7);
 
-        nama_produk = findViewById(R.id.nama_produk);
+        nama_barang = findViewById(R.id.nama_barang);
         harga = findViewById(R.id.harga);
-        size = findViewById(R.id.size);
-        material = findViewById(R.id.material);
-        bust = findViewById(R.id.bust);
-        length = findViewById(R.id.length);
-        model = findViewById(R.id.model);
+        ukuran = findViewById(R.id.ukuran);
+        bahan = findViewById(R.id.bahan);
+        ld = findViewById(R.id.ld);
+        lengan = findViewById(R.id.lengan);
+        panjang = findViewById(R.id.panjang);
         instruction = findViewById(R.id.instruction);
 
         //Mengambil data dari intent
@@ -50,27 +56,40 @@ public class ProductDetailsActivity extends AppCompatActivity {
         String list_produk = bundle.getString("list_produk");
 
         //Mengambil data dari firebase berdasarkan intent
-        reference = FirebaseDatabase.getInstance().getReference().child("Produk").child(list_produk);
+        reference = FirebaseDatabase.getInstance().getReference().child("Products").child(list_produk);
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 //Menimpa data yang ada dengan data yang baru
-                nama_produk.setText(dataSnapshot.child("nama_produk").getValue().toString());
+                nama_barang.setText(dataSnapshot.child("nama_barang").getValue().toString());
                 harga.setText("Rp " + dataSnapshot.child("harga").getValue().toString());
-                size.setText(dataSnapshot.child("size").getValue().toString());
-                material.setText(dataSnapshot.child("material").getValue().toString());
-                bust.setText(dataSnapshot.child("bust").getValue().toString());
-                length.setText(dataSnapshot.child("length").getValue().toString());
-                model.setText(dataSnapshot.child("model").getValue().toString());
+                ukuran.setText(dataSnapshot.child("ukuran").getValue().toString());
+                bahan.setText(dataSnapshot.child("bahan").getValue().toString());
+                ld.setText(dataSnapshot.child("ld").getValue().toString());
+                lengan.setText(dataSnapshot.child("lengan").getValue().toString());
+                panjang.setText(dataSnapshot.child("panjang").getValue().toString());
                 instruction.setText(dataSnapshot.child("instruction").getValue().toString());
                 Picasso.with(ProductDetailsActivity.this)
-                        .load(dataSnapshot.child("image1")
-                                .getValue().toString()).centerCrop().fit()
-                        .into(imageViewDetail1);
+                        .load(dataSnapshot.child("url_product_image1")
+                                .getValue().toString()).centerCrop().fit().into(url_product_image1);
                 Picasso.with(ProductDetailsActivity.this)
-                        .load(dataSnapshot.child("image2")
-                                .getValue().toString()).centerCrop().fit()
-                        .into(imageView3);
+                        .load(dataSnapshot.child("url_product_image2")
+                                .getValue().toString()).centerCrop().fit().into(url_product_image2);
+                Picasso.with(ProductDetailsActivity.this)
+                        .load(dataSnapshot.child("url_product_image3")
+                                .getValue().toString()).centerCrop().fit().into(url_product_image3);
+                Picasso.with(ProductDetailsActivity.this)
+                        .load(dataSnapshot.child("url_product_image4")
+                                .getValue().toString()).centerCrop().fit().into(url_product_image4);
+                Picasso.with(ProductDetailsActivity.this)
+                        .load(dataSnapshot.child("url_product_image5")
+                                .getValue().toString()).centerCrop().fit().into(url_product_image5);
+                Picasso.with(ProductDetailsActivity.this)
+                        .load(dataSnapshot.child("url_product_image6")
+                                .getValue().toString()).centerCrop().fit().into(url_product_image6);
+                Picasso.with(ProductDetailsActivity.this)
+                        .load(dataSnapshot.child("url_product_image7")
+                                .getValue().toString()).centerCrop().fit().into(url_product_image7);
             }
 
             @Override

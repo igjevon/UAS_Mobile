@@ -31,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
     LinearLayout go_to_loungewears;
 
     ImageView pic_photo_home_user_circled, chat;
-    TextView tvNamaPengguna, user_balance;
+    TextView nama_lengkap, user_balance;
     TextView go_to_profile;
 
     DatabaseReference reference;
@@ -48,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
         getUsernameLocal();
 
         pic_photo_home_user_circled = findViewById(R.id.pic_photo_home_user_circled);
-        tvNamaPengguna = findViewById(R.id.tvNamaPengguna);
+        nama_lengkap = findViewById(R.id.nama_lengkap);
         user_balance = findViewById(R.id.user_balance);
         chat = findViewById(R.id.chat);
         go_to_profile = findViewById(R.id.go_to_profile);
@@ -59,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                tvNamaPengguna.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
+                nama_lengkap.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
                 user_balance.setText("Rp " + dataSnapshot.child("user_balance").getValue().toString());
                 Picasso.with(HomeActivity.this)
                         .load(dataSnapshot.child("url_photo_profile")

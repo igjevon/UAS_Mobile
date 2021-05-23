@@ -92,7 +92,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvCategory">
 
                 <ImageView
-                    android:id="@+id/image_produk"
+                    android:id="@+id/url_product_image1"
                     android:layout_width="103dp"
                     android:layout_height="157dp"
                     android:src="@drawable/skirt_amber" />
@@ -105,7 +105,7 @@
                     android:gravity="center">
 
                     <TextView
-                        android:id="@+id/nama_produk"
+                        android:id="@+id/nama_barang"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_semibold"
@@ -114,7 +114,7 @@
                         android:textSize="22sp" />
 
                     <TextView
-                        android:id="@+id/size"
+                        android:id="@+id/ukuran"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"

@@ -1,5 +1,6 @@
 package umn.ac.id.fashop;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,12 +10,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 public class ListProductActivity extends AppCompatActivity {
     LinearLayout button_back;
-    TextView nama_produk, size, harga;
-    ImageView image_produk;
+    TextView nama_barang, ukuran, harga;
+    ImageView url_product_image1;
 
     DatabaseReference reference;
 
@@ -23,10 +28,10 @@ public class ListProductActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_product);
 
-        nama_produk = findViewById(R.id.nama_produk);
-        size = findViewById(R.id.size);
+        nama_barang = findViewById(R.id.nama_barang);
+        ukuran = findViewById(R.id.ukuran);
         harga = findViewById(R.id.harga);
-        image_produk = findViewById(R.id.image_produk);
+        url_product_image1 = findViewById(R.id.url_product_image1);
 
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
