@@ -75,7 +75,7 @@
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="@+id/bg1"
                 app:layout_constraintStart_toStartOf="@id/bg1"
-                app:layout_constraintTop_toBottomOf="@+id/pic_photo_home_user_circled" />
+                app:layout_constraintTop_toBottomOf="@+id/photo_profile" />
             <LinearLayout
                 android:id="@+id/kolom1"
                 android:layout_width="330dp"
