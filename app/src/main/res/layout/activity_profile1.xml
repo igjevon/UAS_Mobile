@@ -59,7 +59,7 @@
                 app:layout_constraintStart_toStartOf="@id/bg1"
                 app:layout_constraintTop_toTopOf="@id/back" />
             <ImageView
-                android:id="@+id/pic_photo_home_user_circled"
+                android:id="@+id/photo_profile"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginTop="5dp"
@@ -67,7 +67,7 @@
                 app:layout_constraintStart_toStartOf="@id/bg1"
                 app:layout_constraintTop_toTopOf="@id/view3" />
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/nama_lengkap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -87,7 +87,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="@id/layout1"
                 app:layout_constraintStart_toStartOf="@id/layout1"
-                app:layout_constraintTop_toBottomOf="@+id/name">
+                app:layout_constraintTop_toBottomOf="@+id/nama_lengkap">
                 <LinearLayout
                     android:id="@+id/nama"
                     android:layout_width="match_parent"

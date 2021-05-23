@@ -31,7 +31,7 @@ public class RegisterTwoAct extends AppCompatActivity {
     LinearLayout btn_back;
     ImageView pic_photo_register_user;
     Button btn_continue, btn_add_photo;
-    EditText nama_lengkap, address;
+    EditText nama_lengkap, address, phone_number;
 
     Uri photo_location;
     Integer photo_max = 1;
@@ -57,6 +57,7 @@ public class RegisterTwoAct extends AppCompatActivity {
         pic_photo_register_user = findViewById(R.id.pic_photo_register_user);
         nama_lengkap = findViewById(R.id.nama_lengkap);
         address = findViewById(R.id.address);
+        phone_number = findViewById(R.id.phone_number);
 
         btn_add_photo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +95,7 @@ public class RegisterTwoAct extends AppCompatActivity {
                                     reference.getRef().child("url_photo_profile").setValue(uri_photo);
                                     reference.getRef().child("nama_lengkap").setValue(nama_lengkap.getText().toString());
                                     reference.getRef().child("address").setValue(address.getText().toString());
+                                    reference.getRef().child("phone_number").setValue(phone_number.getText().toString());
                                 }
                             }).addOnCompleteListener(new OnCompleteListener<Uri>() {
                                 @Override
