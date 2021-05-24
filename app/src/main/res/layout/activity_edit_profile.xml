@@ -54,51 +54,50 @@
                 app:layout_constraintStart_toStartOf="@id/bg1"
                 app:layout_constraintTop_toTopOf="@+id/bg1" />
 
-            <View
+            <com.github.florent37.shapeofview.shapes.CircleView
                 android:id="@+id/view3"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
-                android:layout_marginTop="45dp"
-                android:background="@drawable/bg_view_circle_picture"
+                android:layout_marginTop="25dp"
                 app:layout_constraintEnd_toEndOf="@+id/bg1"
                 app:layout_constraintStart_toStartOf="@id/bg1"
-                app:layout_constraintTop_toTopOf="@id/back" />
+                app:layout_constraintTop_toTopOf="@id/back">
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/user1"
-                app:layout_constraintEnd_toEndOf="@+id/view"
-                app:layout_constraintStart_toStartOf="@id/bg1"
-                app:layout_constraintTop_toTopOf="@id/view3" />
+                <ImageView
+                    android:id="@+id/photo_edit_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.github.florent37.shapeofview.shapes.CircleView>
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="Song Jihyo"
+            <Button
+                android:id="@+id/btn_edit_photo"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="60dp"
+                android:background="@drawable/bg_btn_plus"
+                android:text="+"
                 android:textColor="#FFF"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/view"
-                app:layout_constraintStart_toStartOf="@id/bg1"
-                app:layout_constraintTop_toBottomOf="@+id/view3" />
+                android:translationZ="90dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.72"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/view3" />
 
             <LinearLayout
                 android:id="@+id/kolom1"
                 android:layout_width="310dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:background="@drawable/bg_layout_white"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.694"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3">
+                app:layout_constraintTop_toBottomOf="@+id/btn_edit_photo">
 
                 <LinearLayout
                     android:id="@+id/nama"
@@ -117,7 +116,7 @@
                         android:textColor="@color/grayPrimary"
                         android:textSize="20sp" />
                     <EditText
-                        android:id="@+id/nama_lengkap"
+                        android:id="@+id/xnama_lengkap"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"
@@ -135,7 +134,7 @@
                         android:textColor="@color/grayPrimary"
                         android:textSize="20sp" />
                     <EditText
-                        android:id="@+id/username"
+                        android:id="@+id/xusername"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"
@@ -149,11 +148,29 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:layout_marginTop="20dp"
+                        android:text="@string/email_label"
+                        android:textColor="@color/grayPrimary"
+                        android:textSize="20sp" />
+                    <EditText
+                        android:id="@+id/xemail_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bg_input_edit"
+                        android:inputType="textEmailAddress"
+                        android:lines="1"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="20dp"
                         android:text="@string/password_label"
                         android:textColor="@color/grayPrimary"
                         android:textSize="20sp" />
                     <EditText
-                        android:id="@+id/password"
+                        android:id="@+id/xpassword"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"
@@ -171,7 +188,7 @@
                         android:textColor="@color/grayPrimary"
                         android:textSize="20sp" />
                     <EditText
-                        android:id="@+id/phonenumber"
+                        android:id="@+id/xphone_number"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"
@@ -189,7 +206,7 @@
                         android:textColor="@color/grayPrimary"
                         android:textSize="20sp" />
                     <EditText
-                        android:id="@+id/address"
+                        android:id="@+id/xaddress"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:background="@drawable/bg_input_edit"
@@ -201,12 +218,12 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btn_continue"
+                android:id="@+id/btn_save"
                 android:layout_width="250dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="20dp"
                 android:background="@color/brownPrimary"
-                android:text="CONTINUE"
+                android:text="SAVE"
                 android:textAlignment="center"
                 android:textColor="#FFF"
                 android:textSize="15sp"
