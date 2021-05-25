@@ -14,12 +14,16 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.HashMap;
 
 public class ChatActivity extends AppCompatActivity {
     ImageView back,send;
     EditText textinput;
+
+    StorageReference storage;
     DatabaseReference reference;
     RecyclerView recyclerView;
 
@@ -42,7 +46,7 @@ public class ChatActivity extends AppCompatActivity {
 
         reference = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(username_key_new);
-
+        storage = FirebaseStorage.getInstance().getReference().child("Photousers").child(username_key_new);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
