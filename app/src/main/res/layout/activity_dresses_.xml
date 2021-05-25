@@ -80,108 +80,21 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/linearLayout_product1"
+                android:id="@+id/item_Dresses"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/bg_layout_white"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical"
                 app:layout_constraintTop_toBottomOf="@+id/tv_womanDresses">
 
-                <ImageView
-                    android:layout_width="103dp"
-                    android:layout_height="157dp"
-                    android:src="@drawable/coal_dress" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/my_dresses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_semibold"
-                        android:text="Long Shirt Dress"
-                        android:textColor="@color/blackPrimary"
-                        android:textSize="22sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="Size S"
-                        android:textColor="@color/grayPrimary"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="IDR 179.000"
-                        android:textColor="@color/grayPrimary"
-                        android:textSize="20sp" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/linearLayout_product2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/bg_layout_white"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout_product1">
-
-                <ImageView
-                    android:layout_width="103dp"
-                    android:layout_height="157dp"
-                    android:src="@drawable/coal_dress" />
-
-                <LinearLayout
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_semibold"
-                        android:text="Long Shirt Dress"
-                        android:textColor="@color/blackPrimary"
-                        android:textSize="22sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="Size M"
-                        android:textColor="@color/grayPrimary"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/montserrat_regular"
-                        android:text="IDR 179.000"
-                        android:textColor="@color/grayPrimary"
-                        android:textSize="20sp" />
-                </LinearLayout>
+                </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

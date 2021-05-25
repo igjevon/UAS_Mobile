@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.LinearLayout;
 
@@ -18,35 +16,34 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class Tops_Activity extends AppCompatActivity {
-    LinearLayout item_Tops;
+public class Outers_Activity extends AppCompatActivity {
+    LinearLayout item_Outers;
 
     DatabaseReference reference2;
 
-    RecyclerView my_tops;
-    ArrayList<MyTops> list;
-    TopsAdapter topsAdapter;
-
+    RecyclerView my_outers;
+    ArrayList<MyOuters> list;
+    OutersAdapter outersAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tops_);
+        setContentView(R.layout.activity_outers_);
+        item_Outers = findViewById(R.id.item_Outers);
 
-        item_Tops = findViewById(R.id.item_Tops);
+        my_outers = findViewById(R.id.my_outers);
+        my_outers.setLayoutManager(new LinearLayoutManager(this));
+        list = new ArrayList<MyOuters>();
 
-        my_tops = findViewById(R.id.my_tops);
-        my_tops.setLayoutManager(new LinearLayoutManager(this));
-        list = new ArrayList<MyTops>();
+        reference2 = FirebaseDatabase.getInstance().getReference().child("Outers");
 
-        reference2 = FirebaseDatabase.getInstance().getReference().child("Tops");
         reference2.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot1: snapshot.getChildren()){
-                    MyTops p = dataSnapshot1.getValue(MyTops.class);
+                    MyOuters p = dataSnapshot1.getValue(MyOuters.class);
                     list.add(p);
-                    topsAdapter = new TopsAdapter(Tops_Activity.this, list);
-                    my_tops.setAdapter(topsAdapter);
+                    outersAdapter = new OutersAdapter(Outers_Activity.this, list);
+                    my_outers.setAdapter(outersAdapter);
                 }
             }
 

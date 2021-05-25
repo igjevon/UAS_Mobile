@@ -6,10 +6,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".Outers_Activity"></activity>
         <activity android:name=".Profile1" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".MyHistoryDetailActivity" />

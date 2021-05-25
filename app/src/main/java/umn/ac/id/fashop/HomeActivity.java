@@ -28,7 +28,7 @@ public class HomeActivity extends AppCompatActivity {
     LinearLayout go_to_tops;
     LinearLayout go_to_bottoms;
     LinearLayout go_to_dresses;
-    LinearLayout go_to_loungewears;
+    LinearLayout go_to_outers;
 
     ImageView pic_photo_home_user_circled, chat;
     TextView nama_lengkap, user_balance;
@@ -76,7 +76,7 @@ public class HomeActivity extends AppCompatActivity {
         go_to_tops = findViewById(R.id.go_to_tops);
         go_to_bottoms = findViewById(R.id.go_to_bottoms);
         go_to_dresses = findViewById(R.id.go_to_dresses);
-        go_to_loungewears = findViewById(R.id.go_to_loungewears);
+        go_to_outers = findViewById(R.id.go_to_outers);
 
         go_to_tops.setOnClickListener(v -> {
             Intent gotoTopsIntent = new Intent(HomeActivity.this, Tops_Activity.class);
@@ -86,25 +86,22 @@ public class HomeActivity extends AppCompatActivity {
         go_to_bottoms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoBottomsIntent = new Intent(HomeActivity.this, ListProductActivity.class);
-                gotoBottomsIntent.putExtra("list_produk", "Bottoms");
+                Intent gotoBottomsIntent = new Intent(HomeActivity.this, Bottoms_Activity.class);
                 startActivity(gotoBottomsIntent);
             }
         });
         go_to_dresses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoDressesIntent = new Intent(HomeActivity.this, ListProductActivity.class);
-                gotoDressesIntent.putExtra("list_produk", "Dresses");
+                Intent gotoDressesIntent = new Intent(HomeActivity.this, Dresses_Activity.class);
                 startActivity(gotoDressesIntent);
             }
         });
-        go_to_loungewears.setOnClickListener(new View.OnClickListener() {
+        go_to_outers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoLoungeWearsIntent = new Intent(HomeActivity.this, ListProductActivity.class);
-                gotoLoungeWearsIntent.putExtra("list_produk", "Lounges");
-                startActivity(gotoLoungeWearsIntent);
+                Intent gotoOutersIntent = new Intent(HomeActivity.this, Outers_Activity.class);
+                startActivity(gotoOutersIntent);
             }
         });
 

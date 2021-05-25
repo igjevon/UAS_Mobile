@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgPrimary"
-    tools:context=".Tops_Activity">
-
+    tools:context=".Outers_Activity">
     <ScrollView
-        android:id="@+id/scrollView_tops"
+        android:id="@+id/scrollView_outers"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -48,11 +47,13 @@
                 android:id="@+id/button_back"
                 android:layout_width="90dp"
                 android:layout_height="55dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/bg_layout_grayprimary"
                 android:gravity="center"
                 android:orientation="vertical"
-                app:layout_constraintEnd_toStartOf="@id/tv_womanTops"
+                app:layout_constraintEnd_toStartOf="@id/tv_womanOuters"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -63,32 +64,33 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/tv_womanTops"
+                android:id="@+id/tv_womanOuters"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="30dp"
-                android:layout_marginBottom="40dp"
                 android:fontFamily="@font/montserrat_semibold"
-                android:text="Woman's Tops"
+                android:text="Woman's Outers"
                 android:textColor="@color/white"
-                android:textSize="30sp"
+                android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.764"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <LinearLayout
-                android:id="@+id/item_Tops"
+                android:id="@+id/item_Outers"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginTop="70dp"
                 android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@+id/tv_womanTops">
+                app:layout_constraintTop_toBottomOf="@+id/tv_womanOuters">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/my_tops"
+                    android:id="@+id/my_outers"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -96,4 +98,5 @@
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
