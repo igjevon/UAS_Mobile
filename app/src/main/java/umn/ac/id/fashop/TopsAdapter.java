@@ -15,7 +15,6 @@ import java.util.ArrayList;
 public class TopsAdapter extends RecyclerView.Adapter<TopsAdapter.MyViewHolder> {
     Context context;
     ArrayList<MyTops> myTops;
-
     public TopsAdapter(Context c, ArrayList<MyTops> p){
         context = c;
         myTops = p;

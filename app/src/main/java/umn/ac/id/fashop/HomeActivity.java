@@ -78,14 +78,10 @@ public class HomeActivity extends AppCompatActivity {
         go_to_dresses = findViewById(R.id.go_to_dresses);
         go_to_loungewears = findViewById(R.id.go_to_loungewears);
 
-        go_to_tops.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoTopsIntent = new Intent(HomeActivity.this, ListProductActivity.class);
-                //Meletakkan data kepada intent
-                gotoTopsIntent.putExtra("list_produk", "Tops");
-                startActivity(gotoTopsIntent);
-            }
+        go_to_tops.setOnClickListener(v -> {
+            Intent gotoTopsIntent = new Intent(HomeActivity.this, Tops_Activity.class);
+            //Meletakkan data kepada intent
+            startActivity(gotoTopsIntent);
         });
         go_to_bottoms.setOnClickListener(new View.OnClickListener() {
             @Override

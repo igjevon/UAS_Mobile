@@ -44,7 +44,7 @@ public class Tops_Activity extends AppCompatActivity {
         my_tops.setLayoutManager(new LinearLayoutManager(this));
         list = new ArrayList<MyTops>();
 
-        reference2 = FirebaseDatabase.getInstance().getReference().child("Tops").child(username_key_new);
+        reference2 = FirebaseDatabase.getInstance().getReference().child("Tops");
         reference2.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -66,5 +66,4 @@ public class Tops_Activity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
         username_key_new = sharedPreferences.getString(username_key, "");
     }
-
 }
