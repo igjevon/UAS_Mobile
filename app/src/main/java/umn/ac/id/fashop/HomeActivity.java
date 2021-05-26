@@ -80,7 +80,6 @@ public class HomeActivity extends AppCompatActivity {
 
         go_to_tops.setOnClickListener(v -> {
             Intent gotoTopsIntent = new Intent(HomeActivity.this, Tops_Activity.class);
-            //Meletakkan data kepada intent
             startActivity(gotoTopsIntent);
         });
         go_to_bottoms.setOnClickListener(new View.OnClickListener() {

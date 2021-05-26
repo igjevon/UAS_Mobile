@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.google.firebase.database.DataSnapshot;
@@ -19,6 +22,7 @@ import java.util.ArrayList;
 public class Bottoms_Activity extends AppCompatActivity {
 
     LinearLayout item_Bottoms;
+    ImageView btn_back;
 
     DatabaseReference reference2;
 
@@ -32,6 +36,15 @@ public class Bottoms_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_bottoms_);
 
         item_Bottoms = findViewById(R.id.item_Bottoms);
+        btn_back = findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoHome = new Intent(Bottoms_Activity.this, HomeActivity.class);
+                startActivity(gotoHome);
+            }
+        });
 
         my_bottoms = findViewById(R.id.my_bottoms);
         my_bottoms.setLayoutManager(new LinearLayoutManager(this));

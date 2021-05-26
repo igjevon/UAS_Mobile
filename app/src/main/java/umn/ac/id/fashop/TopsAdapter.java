@@ -32,6 +32,7 @@ public class TopsAdapter extends RecyclerView.Adapter<TopsAdapter.MyViewHolder> 
         holder.yTopUkuran.setText(myTops.get(position).getUkuran());
         holder.yTopHarga.setText("IDR " + Integer.toString(myTops.get(position).getHarga()));
 
+
         final String getNamaBarang = myTops.get(position).getNama_barang();
 
         holder.itemView.setOnClickListener(v -> {
