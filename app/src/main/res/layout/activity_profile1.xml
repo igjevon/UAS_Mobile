@@ -158,6 +158,13 @@
                         android:layout_marginBottom="12dp"
                         android:textColor="@color/blackPrimary"
                         android:textSize="20sp" />
+                    <Button
+                        android:id="@+id/btn_location"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:text="Location"
+                        android:background="@drawable/bg_btn_blue_primary"/>
+
                 </LinearLayout>
             </LinearLayout>
 

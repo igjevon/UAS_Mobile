@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 public class Profile1 extends AppCompatActivity {
-    Button edit_profile, btn_signout, btn_history;
+    Button edit_profile, btn_signout, btn_history, btn_location;
     ImageView back;
     TextView username,nama_lengkap, address, phone_number, email_address;
     ImageView photo_profile;
@@ -111,6 +111,14 @@ public class Profile1 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gotoHistory = new Intent(Profile1.this, HistoryActivity.class);
                 startActivity(gotoHistory);
+            }
+        });
+
+        btn_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoLocation = new Intent(Profile1.this, MapsActivity.class);
+                startActivity(gotoLocation);
             }
         });
     }
