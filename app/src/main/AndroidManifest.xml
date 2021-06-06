@@ -35,6 +35,7 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
+        <activity android:name=".PaymentActivity" />
         <activity android:name=".Outers_Activity" />
         <activity android:name=".Profile1" />
         <activity android:name=".ChatActivity" />

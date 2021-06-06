@@ -2,6 +2,7 @@ package umn.ac.id.fashop;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,12 +17,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+
 public class ListProductActivity extends AppCompatActivity {
     LinearLayout button_back;
     TextView nama_barang, ukuran, harga;
     ImageView url_product_image1;
 
     DatabaseReference reference;
+    RecyclerView viewListProduct;
+    //ArrayList<ListProduct> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,11 @@ public class ListProductActivity extends AppCompatActivity {
         ukuran = findViewById(R.id.ukuran);
         harga = findViewById(R.id.harga);
         url_product_image1 = findViewById(R.id.url_product_image1);
+
+        //viewListProduct = findViewById(R.id.viewListProduct);
+
+        //reference = FirebaseDatabase.getInstance().getReference().child("MyHistory").child(username_key_new);
+        //reference.addListenerForSingleValueEvent(new ValueEventListener() {
 
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
