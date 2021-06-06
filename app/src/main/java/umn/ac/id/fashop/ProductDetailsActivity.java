@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -53,58 +54,77 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
         //Mengambil data dari intent
         Bundle bundle = getIntent().getExtras();
-        String barang_baru = bundle.getString("barang");
+        String barang_baru = bundle.getString("nama_barang");
 
         //Mengambil data dari firebase berdasarkan intent
         reference = FirebaseDatabase.getInstance().getReference().child("Tops").child(barang_baru);
-        reference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //Menimpa data yang ada dengan data yang baru
-                xnama_barang.setText(dataSnapshot.child("nama_barang").getValue().toString());
-                xharga.setText("Rp " + dataSnapshot.child("harga").getValue().toString());
-                xukuran.setText(dataSnapshot.child("ukuran").getValue().toString());
-                xbahan.setText(dataSnapshot.child("bahan").getValue().toString());
-                xld.setText(dataSnapshot.child("ld").getValue().toString());
-                xlengan.setText(dataSnapshot.child("lengan").getValue().toString());
-                xpanjang.setText(dataSnapshot.child("panjang").getValue().toString());
-                Picasso.with(ProductDetailsActivity.this)
-                        .load(dataSnapshot.child("url_product_image1")
-                                .getValue().toString()).centerCrop().fit().into(xurl_product_image1);
-//                Picasso.with(ProductDetailsActivity.this)
-//                        .load(dataSnapshot.child("url_product_image2")
-//                                .getValue().toString()).centerCrop().fit().into(xurl_product_image2);
-//                Picasso.with(ProductDetailsActivity.this)
-//                        .load(dataSnapshot.child("url_product_image3")
-//                                .getValue().toString()).centerCrop().fit().into(xurl_product_image3);
-//                Picasso.with(ProductDetailsActivity.this)
-//                        .load(dataSnapshot.child("url_product_image4")
-//                                .getValue().toString()).centerCrop().fit().into(xurl_product_image4);
-//                Picasso.with(ProductDetailsActivity.this)
-//                        .load(dataSnapshot.child("url_product_image5")
-//                                .getValue().toString()).centerCrop().fit().into(xurl_product_image5);
-//                Picasso.with(ProductDetailsActivity.this)
-//                        .load(dataSnapshot.child("url_product_image6")
-//                                .getValue().toString()).centerCrop().fit().into(xurl_product_image6);
-//                Picasso.with(ProductDetailsActivity.this)
-//                        .load(dataSnapshot.child("url_product_image7")
-//                                .getValue().toString()).centerCrop().fit().into(xurl_product_image7);
-            }
+        if (reference != null){
+            reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        if (dataSnapshot.hasChild("nama_barang")) {
+                            xnama_barang.setText(dataSnapshot.child("nama_barang").getValue().toString());
+                            xharga.setText("Rp " + dataSnapshot.child("harga").getValue().toString());
+                            xukuran.setText(dataSnapshot.child("ukuran").getValue().toString());
+                            xbahan.setText(dataSnapshot.child("bahan").getValue().toString());
+                            xld.setText(dataSnapshot.child("ld").getValue().toString());
+                            xlengan.setText(dataSnapshot.child("lengan").getValue().toString());
+                            xpanjang.setText(dataSnapshot.child("panjang").getValue().toString());
+                            Picasso.get()
+                                    .load(dataSnapshot.child("url_product_image1")
+                                            .getValue().toString()).centerCrop().fit().into(xurl_product_image1);
+                        } else {
+                            Toast.makeText(ProductDetailsActivity.this, "Data do not exists...", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(ProductDetailsActivity.this, "Does not exists..........", Toast.LENGTH_SHORT).show();
+                    }
+                    //Menimpa data yang ada dengan data yang baru
+    //                xnama_barang.setText(dataSnapshot.child("nama_barang").getValue().toString());
+    //                xharga.setText("Rp " + dataSnapshot.child("harga").getValue().toString());
+    //                xukuran.setText(dataSnapshot.child("ukuran").getValue().toString());
+    //                xbahan.setText(dataSnapshot.child("bahan").getValue().toString());
+    //                xld.setText(dataSnapshot.child("ld").getValue().toString());
+    //                xlengan.setText(dataSnapshot.child("lengan").getValue().toString());
+    //                xpanjang.setText(dataSnapshot.child("panjang").getValue().toString());
+//                    Picasso.get()
+//                            .load(dataSnapshot.child("url_product_image1")
+//                                    .getValue().toString()).centerCrop().fit().into(xurl_product_image1);
+    //                Picasso.with(ProductDetailsActivity.this)
+    //                        .load(dataSnapshot.child("url_product_image2")
+    //                                .getValue().toString()).centerCrop().fit().into(xurl_product_image2);
+    //                Picasso.with(ProductDetailsActivity.this)
+    //                        .load(dataSnapshot.child("url_product_image3")
+    //                                .getValue().toString()).centerCrop().fit().into(xurl_product_image3);
+    //                Picasso.with(ProductDetailsActivity.this)
+    //                        .load(dataSnapshot.child("url_product_image4")
+    //                                .getValue().toString()).centerCrop().fit().into(xurl_product_image4);
+    //                Picasso.with(ProductDetailsActivity.this)
+    //                        .load(dataSnapshot.child("url_product_image5")
+    //                                .getValue().toString()).centerCrop().fit().into(xurl_product_image5);
+    //                Picasso.with(ProductDetailsActivity.this)
+    //                        .load(dataSnapshot.child("url_product_image6")
+    //                                .getValue().toString()).centerCrop().fit().into(xurl_product_image6);
+    //                Picasso.with(ProductDetailsActivity.this)
+    //                        .load(dataSnapshot.child("url_product_image7")
+    //                                .getValue().toString()).centerCrop().fit().into(xurl_product_image7);
+                    }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
+                }
+            });
+        }else{
+            Toast.makeText(ProductDetailsActivity.this, "No data found...", Toast.LENGTH_SHORT).show();
+        }
 
         addToCart = findViewById(R.id.addToCart);
-        addToCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent toCheckout = new Intent(ProductDetailsActivity.this, CheckoutActivity.class);
-                toCheckout.putExtra("checkout_barang", barang_baru);
-                startActivity(toCheckout);
-            }
+        addToCart.setOnClickListener(v -> {
+            Intent toCheckout = new Intent(ProductDetailsActivity.this, CheckoutActivity.class);
+            toCheckout.putExtra("checkout_barang", barang_baru);
+            startActivity(toCheckout);
         });
 
         button_back.setOnClickListener(new View.OnClickListener() {

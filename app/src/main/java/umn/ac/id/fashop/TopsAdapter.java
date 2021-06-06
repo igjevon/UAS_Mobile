@@ -34,7 +34,7 @@ public class TopsAdapter extends RecyclerView.Adapter<TopsAdapter.MyViewHolder> 
         holder.yTopNama.setText(myTops.get(position).getNama_barang());
         holder.yTopUkuran.setText(myTops.get(position).getUkuran());
         holder.yTopHarga.setText("IDR " + Integer.toString(myTops.get(position).getHarga()));
-        Picasso.get().load(myTops.get(position).getUrl_product_image1()).fit().centerInside().into(holder.yTopImages);
+        //Picasso.get().load(myTops.get(position).getUrl_product_image1()).fit().centerInside().into(holder.yTopImages);
 
         final String getNamaBarang = myTops.get(position).getNama_barang();
 
