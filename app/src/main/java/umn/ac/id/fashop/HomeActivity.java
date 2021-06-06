@@ -61,7 +61,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 nama_lengkap.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
                 user_balance.setText("Rp " + dataSnapshot.child("user_balance").getValue().toString());
-                Picasso.with(HomeActivity.this)
+                Picasso.get()
                         .load(dataSnapshot.child("url_photo_profile")
                                 .getValue().toString()).centerCrop().fit()
                         .into(pic_photo_home_user_circled);

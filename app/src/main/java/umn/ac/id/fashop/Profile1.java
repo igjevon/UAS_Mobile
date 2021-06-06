@@ -60,7 +60,7 @@ public class Profile1 extends AppCompatActivity {
                 phone_number.setText(dataSnapshot.child("phone_number").getValue().toString());
                 address.setText(dataSnapshot.child("address").getValue().toString());
                 email_address.setText(dataSnapshot.child("email_address").getValue().toString());
-                Picasso.with(Profile1.this)
+                Picasso.get()
                         .load(dataSnapshot.child("url_photo_profile")
                                 .getValue().toString()).centerCrop().fit()
                         .into(photo_profile);

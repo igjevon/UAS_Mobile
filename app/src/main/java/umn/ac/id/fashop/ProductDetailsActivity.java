@@ -69,25 +69,25 @@ public class ProductDetailsActivity extends AppCompatActivity {
                 lengan.setText(dataSnapshot.child("lengan").getValue().toString());
                 panjang.setText(dataSnapshot.child("panjang").getValue().toString());
                 instruction.setText(dataSnapshot.child("instruction").getValue().toString());
-                Picasso.with(ProductDetailsActivity.this)
+                Picasso.get()
                         .load(dataSnapshot.child("url_product_image1")
                                 .getValue().toString()).centerCrop().fit().into(url_product_image1);
-                Picasso.with(ProductDetailsActivity.this)
+                Picasso.get()
                         .load(dataSnapshot.child("url_product_image2")
                                 .getValue().toString()).centerCrop().fit().into(url_product_image2);
-                Picasso.with(ProductDetailsActivity.this)
+                Picasso.get()
                         .load(dataSnapshot.child("url_product_image3")
                                 .getValue().toString()).centerCrop().fit().into(url_product_image3);
-                Picasso.with(ProductDetailsActivity.this)
+                Picasso.get()
                         .load(dataSnapshot.child("url_product_image4")
                                 .getValue().toString()).centerCrop().fit().into(url_product_image4);
-                Picasso.with(ProductDetailsActivity.this)
+                Picasso.get()
                         .load(dataSnapshot.child("url_product_image5")
                                 .getValue().toString()).centerCrop().fit().into(url_product_image5);
-                Picasso.with(ProductDetailsActivity.this)
+                Picasso.get()
                         .load(dataSnapshot.child("url_product_image6")
                                 .getValue().toString()).centerCrop().fit().into(url_product_image6);
-                Picasso.with(ProductDetailsActivity.this)
+                Picasso.get()
                         .load(dataSnapshot.child("url_product_image7")
                                 .getValue().toString()).centerCrop().fit().into(url_product_image7);
             }
