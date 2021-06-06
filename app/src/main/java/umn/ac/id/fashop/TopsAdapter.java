@@ -5,10 +5,13 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -31,14 +34,14 @@ public class TopsAdapter extends RecyclerView.Adapter<TopsAdapter.MyViewHolder> 
         holder.yTopNama.setText(myTops.get(position).getNama_barang());
         holder.yTopUkuran.setText(myTops.get(position).getUkuran());
         holder.yTopHarga.setText("IDR " + Integer.toString(myTops.get(position).getHarga()));
-
+        //Picasso.get().load(myTops.get(position).getUrl_product_image1()).fit().centerInside().into(holder.yTopImages);
 
         final String getNamaBarang = myTops.get(position).getNama_barang();
 
         holder.itemView.setOnClickListener(v -> {
-            Intent goToHistoryOrderDetails = new Intent(context, MyHistoryDetailActivity.class);
-            goToHistoryOrderDetails.putExtra("nama_barang", getNamaBarang);
-            context.startActivity(goToHistoryOrderDetails);
+            Intent goToProductDetails = new Intent(context, ProductDetailsActivity.class);
+            goToProductDetails.putExtra("nama_barang", getNamaBarang);
+            context.startActivity(goToProductDetails);
         });
     }
 
@@ -49,11 +52,13 @@ public class TopsAdapter extends RecyclerView.Adapter<TopsAdapter.MyViewHolder> 
 
     class MyViewHolder extends RecyclerView.ViewHolder{
         TextView yTopNama, yTopUkuran, yTopHarga;
+        ImageView yTopImages;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             yTopNama = itemView.findViewById(R.id.yTopNama);
             yTopUkuran = itemView.findViewById(R.id.yTopUkuran);
             yTopHarga = itemView.findViewById(R.id.yTopHarga);
+            yTopImages = itemView.findViewById(R.id.yTopImages);
         }
     }
 }

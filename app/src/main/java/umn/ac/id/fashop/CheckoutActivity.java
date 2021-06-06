@@ -104,7 +104,7 @@ public class CheckoutActivity extends AppCompatActivity {
                 nama_barang.setText(dataSnapshot.child("nama_produk").getValue().toString());
                 ukuran.setText(dataSnapshot.child("size").getValue().toString());
                 valuehargaproduk = Integer.valueOf(dataSnapshot.child("harga").getValue().toString());
-                Picasso.with(CheckoutActivity.this)
+                Picasso.get()
                         .load(dataSnapshot.child("image1")
                                 .getValue().toString()).centerCrop().fit()
                         .into(url_product_image1);

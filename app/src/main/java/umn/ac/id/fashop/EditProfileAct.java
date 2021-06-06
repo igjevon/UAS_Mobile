@@ -75,7 +75,7 @@ public class EditProfileAct extends AppCompatActivity {
                 xphone_number.setText(dataSnapshot.child("phone_number").getValue().toString());
                 xaddress.setText(dataSnapshot.child("address").getValue().toString());
                 xemail_address.setText(dataSnapshot.child("email_address").getValue().toString());
-                Picasso.with(EditProfileAct.this)
+                Picasso.get()
                         .load(dataSnapshot.child("url_photo_profile")
                                 .getValue().toString()).centerCrop().fit()
                         .into(photo_edit_profile);
@@ -186,7 +186,7 @@ public class EditProfileAct extends AppCompatActivity {
         if(requestCode == photo_max && resultCode == RESULT_OK && data != null && data.getData() != null)
         {
             photo_location = data.getData();
-            Picasso.with(this).load(photo_location).centerCrop().fit().into(photo_edit_profile);
+            Picasso.get().load(photo_location).centerCrop().fit().into(photo_edit_profile);
         }
     }
 
