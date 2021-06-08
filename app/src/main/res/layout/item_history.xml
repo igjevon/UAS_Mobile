@@ -19,15 +19,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <TextView
-                android:id="@+id/xtanggal_order"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="gravity"
-                android:gravity="right"
-                android:textColor="@color/blackPrimary"
-                android:textSize="10sp"
-                android:fontFamily="@font/montserrat_regular"/>
+<!--            <TextView-->
+<!--                android:id="@+id/xtanggal_order"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textAlignment="gravity"-->
+<!--                android:gravity="right"-->
+<!--                android:textColor="@color/blackPrimary"-->
+<!--                android:textSize="10sp"-->
+<!--                android:fontFamily="@font/montserrat_regular"/>-->
             <TextView
                 android:id="@+id/xnama_barang"
                 android:layout_width="match_parent"
@@ -36,6 +36,7 @@
                 android:textColor="@color/blackPrimary"
                 android:textSize="22sp"
                 android:fontFamily="@font/montserrat_semibold"/>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,6 +50,7 @@
                     android:textSize="20sp"
                     android:textColor="@color/grayPrimary"
                     android:fontFamily="@font/montserrat_regular"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -68,28 +70,35 @@
                     android:textColor="@color/grayPrimary"
                     android:fontFamily="@font/montserrat_regular"/>
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/xharga"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:textAlignment="gravity"
-                android:gravity="right"
-                android:fontFamily="@font/montserrat_regular"
-                android:textColor="@color/grayPrimary"
-                android:textSize="20sp"/>
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textAlignment="gravity"
+                    android:gravity="right"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/grayPrimary"
+                    android:textSize="20sp"
+                    android:text="Total : "/>
 
-            <TextView
-                android:id="@+id/xtotal_order"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textAlignment="gravity"
-                android:gravity="right"
-                android:text="Total : IDR 399000"
-                android:textSize="20sp"
-                android:textColor="@color/grayPrimary"
-                android:fontFamily="@font/montserrat_regular"/>
+                <TextView
+                    android:id="@+id/xharga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="gravity"
+                    android:gravity="right"
+                    android:textSize="20sp"
+                    android:textColor="@color/grayPrimary"
+                    android:fontFamily="@font/montserrat_regular"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

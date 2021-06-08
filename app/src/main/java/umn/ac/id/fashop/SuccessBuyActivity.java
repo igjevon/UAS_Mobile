@@ -45,7 +45,7 @@ public class SuccessBuyActivity extends AppCompatActivity {
         btnViewOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoprofile = new Intent(SuccessBuyActivity.this, Profile1.class);
+                Intent gotoprofile = new Intent(SuccessBuyActivity.this, HistoryActivity.class);
                 startActivity(gotoprofile);
             }
         });

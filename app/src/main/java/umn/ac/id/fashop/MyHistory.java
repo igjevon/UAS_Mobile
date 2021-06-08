@@ -1,18 +1,17 @@
 package umn.ac.id.fashop;
 
 public class MyHistory {
-    String nama_barang, tanggal_order, jumlah, ukuran;
-    Integer harga;
+    String nama_barang, ukuran;
+    Integer harga, jumlah;
 
     public MyHistory() {
     }
 
-    public MyHistory(String nama_barang, String tanggal_order, String jumlah, Integer harga, String ukuran) {
+    public MyHistory(String nama_barang, String ukuran, Integer harga, Integer jumlah) {
         this.nama_barang = nama_barang;
-        this.tanggal_order = tanggal_order;
-        this.jumlah = jumlah;
-        this.harga = harga;
         this.ukuran = ukuran;
+        this.harga = harga;
+        this.jumlah = jumlah;
     }
 
     public String getNama_barang() {
@@ -23,20 +22,12 @@ public class MyHistory {
         this.nama_barang = nama_barang;
     }
 
-    public String getTanggal_order() {
-        return tanggal_order;
+    public String getUkuran() {
+        return ukuran;
     }
 
-    public void setTanggal_order(String tanggal_order) {
-        this.tanggal_order = tanggal_order;
-    }
-
-    public String getJumlah() {
-        return jumlah;
-    }
-
-    public void setJumlah(String jumlah) {
-        this.jumlah = jumlah;
+    public void setUkuran(String ukuran) {
+        this.ukuran = ukuran;
     }
 
     public Integer getHarga() {
@@ -47,11 +38,11 @@ public class MyHistory {
         this.harga = harga;
     }
 
-    public String getUkuran() {
-        return ukuran;
+    public Integer getJumlah() {
+        return jumlah;
     }
 
-    public void setUkuran(String ukuran) {
-        this.ukuran = ukuran;
+    public void setJumlah(Integer jumlah) {
+        this.jumlah = jumlah;
     }
 }

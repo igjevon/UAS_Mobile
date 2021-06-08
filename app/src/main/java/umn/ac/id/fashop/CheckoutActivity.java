@@ -132,7 +132,7 @@ public class CheckoutActivity extends AppCompatActivity {
         payNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Menyimpan data user kepada firebase dan membuat table baru "MyProducts"
+                //Menyimpan data user kepada firebase dan membuat table baru "MyHistory"
                 reference3 = FirebaseDatabase.getInstance()
                         .getReference().child("MyHistory")
                         .child(username_key_new).child(xnama_barang.getText().toString() + nomor_transaksi);

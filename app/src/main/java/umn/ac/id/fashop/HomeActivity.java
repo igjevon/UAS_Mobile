@@ -36,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
     ArrayList<MyPromo> list;
     PromoAdapter promoAdapter;
 
+
     DatabaseReference reference, reference2;
 
     String USERNAME_KEY = "usernamekey";
@@ -54,6 +55,11 @@ public class HomeActivity extends AppCompatActivity {
         user_balance = findViewById(R.id.user_balance);
         chat = findViewById(R.id.chat);
         go_to_profile = findViewById(R.id.go_to_profile);
+
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false);
+//
+//        RecyclerView my_promo = (RecyclerView)findViewById(R.id.my_promo);
+//        my_promo.setLayoutManager(layoutManager);
 
         reference = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(username_key_new);

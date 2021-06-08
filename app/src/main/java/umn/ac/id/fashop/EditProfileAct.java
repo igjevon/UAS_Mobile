@@ -181,7 +181,7 @@ public class EditProfileAct extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoback = new Intent(EditProfileAct.this, HomeActivity.class);
+                Intent gotoback = new Intent(EditProfileAct.this, Profile1.class);
                 startActivity(gotoback);
             }
         });

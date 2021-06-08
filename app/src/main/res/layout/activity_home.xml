@@ -316,13 +316,18 @@
                     android:id="@+id/item_promo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     app:layout_constraintTop_toBottomOf="@+id/tv_womanOuters">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/my_promo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
 
                     </androidx.recyclerview.widget.RecyclerView>
                 </LinearLayout>
