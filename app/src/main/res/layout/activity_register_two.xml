@@ -199,7 +199,7 @@
                     android:layout_height="55dp"
                     android:background="@drawable/bg_layout_redthird"
                     android:text="CONTINUE"
-                    android:fontFamily="@font/montserrat_semibold"
+                    android:fontFamily="@font/montserrat_bold"
                     android:textColor="#FFF"
                     android:textSize="20sp"/>
 
