@@ -49,6 +49,7 @@
         android:textAlignment="center"
         android:textColor="#FFF"
         android:textSize="20sp"
+        android:fontFamily="@font/montserrat_semibold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.872"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,6 +66,7 @@
         android:orientation="vertical"
         android:paddingTop="44dp"
         android:paddingBottom="30dp"
+        android:fontFamily="@font/montserrat_semibold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,12 +85,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:text="@string/name_label"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:textColor="@color/grayPrimary"
                         android:textSize="20sp" />
                     <EditText
                         android:id="@+id/nama_lengkap"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:background="@drawable/bg_input_edit"
                         android:inputType="text"
                         android:lines="1"
@@ -108,12 +112,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/address_label"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:textColor="@color/grayPrimary"
                         android:textSize="20sp" />
                     <EditText
                         android:id="@+id/address"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:background="@drawable/bg_input_edit"
                         android:inputType="text"
                         android:lines="1"
@@ -133,6 +139,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/phonenumber"
+                android:fontFamily="@font/montserrat_semibold"
                 android:textColor="@color/grayPrimary"
                 android:textSize="20sp" />
             <EditText
@@ -140,6 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
+                android:fontFamily="@font/montserrat_semibold"
                 android:inputType="text"
                 android:lines="1"
                 android:paddingLeft="12dp"
@@ -191,6 +199,7 @@
                     android:layout_height="55dp"
                     android:background="@drawable/bg_layout_redthird"
                     android:text="CONTINUE"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:textColor="#FFF"
                     android:textSize="20sp"/>
 

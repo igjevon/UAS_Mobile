@@ -73,6 +73,7 @@
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="@+id/bg1"
                 app:layout_constraintStart_toStartOf="@id/bg1"
+                android:fontFamily="@font/montserrat_semibold"
                 app:layout_constraintTop_toBottomOf="@+id/view3" />
 
             <LinearLayout
@@ -102,6 +103,7 @@
                         android:layout_marginBottom="12dp"
                         android:text="@string/username_label"
                         android:textColor="@color/grayPrimary"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:textSize="20sp" />
                     <TextView
                         android:id="@+id/username"
@@ -109,6 +111,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:textColor="@color/blackPrimary"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:textSize="20sp" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -117,6 +120,7 @@
                         android:layout_marginBottom="12dp"
                         android:text="@string/email_label"
                         android:textColor="@color/grayPrimary"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:textSize="20sp" />
                     <TextView
                         android:id="@+id/email_address"
@@ -124,6 +128,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:textColor="@color/blackPrimary"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:textSize="20sp" />
 
                     <TextView
@@ -133,6 +138,7 @@
                         android:layout_marginBottom="12dp"
                         android:text="@string/phonenumber"
                         android:textColor="@color/grayPrimary"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:textSize="20sp" />
 
                     <TextView
@@ -141,6 +147,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:textColor="@color/blackPrimary"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:textSize="20sp" />
 
                     <TextView
@@ -150,6 +157,7 @@
                         android:layout_marginBottom="12dp"
                         android:text="@string/address_label"
                         android:textColor="@color/grayPrimary"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:textSize="20sp" />
                     <TextView
                         android:id="@+id/address"
@@ -157,6 +165,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:textColor="@color/blackPrimary"
+                        android:fontFamily="@font/montserrat_semibold"
                         android:textSize="20sp" />
 <!--                    <Button-->
 <!--                        android:id="@+id/btn_location"-->
@@ -180,6 +189,7 @@
                 android:textAlignment="center"
                 android:textColor="#FFF"
                 android:textSize="15sp"
+                android:fontFamily="@font/montserrat_semibold"
                 app:layout_constraintStart_toStartOf="@id/layout1"
                 app:layout_constraintTop_toBottomOf="@+id/kolom1" />
 
@@ -195,6 +205,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="15sp"
+                android:fontFamily="@font/montserrat_semibold"
                 app:layout_constraintEnd_toEndOf="@id/layout1"
                 app:layout_constraintHorizontal_bias="0.293"
                 app:layout_constraintStart_toEndOf="@+id/btn_editprofile"
@@ -211,6 +222,7 @@
                 android:text="SIGN OUT"
                 android:gravity="center"
                 android:textAlignment="center"
+                android:fontFamily="@font/montserrat_semibold"
                 android:textColor="@color/brownPrimary"
                 android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="@id/layout1"
