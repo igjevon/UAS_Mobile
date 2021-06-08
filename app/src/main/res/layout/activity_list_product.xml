@@ -92,7 +92,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvCategory">
 
                 <ImageView
-                    android:id="@+id/url_product_image1"
+                    android:id="@+id/yurl_product_image1"
                     android:layout_width="103dp"
                     android:layout_height="157dp"
                     android:src="@drawable/skirt_amber" />

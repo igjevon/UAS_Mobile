@@ -42,69 +42,60 @@
                         android:id="@+id/xurl_product_image1"
                         android:layout_width="218dp"
                         android:layout_height="326dp"
-                        android:src="@drawable/detail1"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/placeholder"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-                    <!--                    <ImageView-->
-                    <!--                        android:id="@+id/xurl_product_image2"-->
-                    <!--                        android:layout_width="218dp"-->
-                    <!--                        android:layout_height="326dp"-->
-                    <!--                        android:layout_marginEnd="16dp"-->
-                    <!--                        android:src="@drawable/detail2"-->
-                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--                        app:layout_constraintHorizontal_bias="0.0"-->
-                    <!--                        app:layout_constraintStart_toEndOf="@+id/xurl_product_image1"-->
-                    <!--                        app:layout_constraintTop_toTopOf="parent" />-->
-                    <!--                    <ImageView-->
-                    <!--                        android:id="@+id/xurl_product_image3"-->
-                    <!--                        android:layout_width="218dp"-->
-                    <!--                        android:layout_height="326dp"-->
-                    <!--                        android:layout_marginEnd="16dp"-->
-                    <!--                        android:src="@drawable/detail2"-->
-                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--                        app:layout_constraintHorizontal_bias="0.0"-->
-                    <!--                        app:layout_constraintStart_toEndOf="@+id/xurl_product_image2"-->
-                    <!--                        app:layout_constraintTop_toTopOf="parent" />-->
-                    <!--                    <ImageView-->
-                    <!--                        android:id="@+id/xurl_product_image4"-->
-                    <!--                        android:layout_width="218dp"-->
-                    <!--                        android:layout_height="326dp"-->
-                    <!--                        android:layout_marginEnd="16dp"-->
-                    <!--                        android:src="@drawable/detail2"-->
-                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--                        app:layout_constraintHorizontal_bias="0.0"-->
-                    <!--                        app:layout_constraintStart_toEndOf="@+id/xurl_product_image3"-->
-                    <!--                        app:layout_constraintTop_toTopOf="parent" />-->
-                    <!--                    <ImageView-->
-                    <!--                        android:id="@+id/xurl_product_image5"-->
-                    <!--                        android:layout_width="218dp"-->
-                    <!--                        android:layout_height="326dp"-->
-                    <!--                        android:layout_marginEnd="16dp"-->
-                    <!--                        android:src="@drawable/detail2"-->
-                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--                        app:layout_constraintHorizontal_bias="0.0"-->
-                    <!--                        app:layout_constraintStart_toEndOf="@+id/xurl_product_image4"-->
-                    <!--                        app:layout_constraintTop_toTopOf="parent" />-->
-                    <!--                    <ImageView-->
-                    <!--                        android:id="@+id/xurl_product_image6"-->
-                    <!--                        android:layout_width="218dp"-->
-                    <!--                        android:layout_height="326dp"-->
-                    <!--                        android:layout_marginEnd="16dp"-->
-                    <!--                        android:src="@drawable/detail2"-->
-                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--                        app:layout_constraintHorizontal_bias="0.0"-->
-                    <!--                        app:layout_constraintStart_toEndOf="@+id/xurl_product_image5"-->
-                    <!--                        app:layout_constraintTop_toTopOf="parent" />-->
-                    <!--                    <ImageView-->
-                    <!--                        android:id="@+id/xurl_product_image7"-->
-                    <!--                        android:layout_width="218dp"-->
-                    <!--                        android:layout_height="326dp"-->
-                    <!--                        android:layout_marginEnd="16dp"-->
-                    <!--                        android:src="@drawable/detail2"-->
-                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--                        app:layout_constraintHorizontal_bias="0.0"-->
-                    <!--                        app:layout_constraintStart_toEndOf="@+id/xurl_product_image6"-->
-                    <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+                    <ImageView
+                        android:id="@+id/xurl_product_image2"
+                        android:layout_width="218dp"
+                        android:layout_height="326dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/detail2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/xurl_product_image1"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/xurl_product_image3"
+                        android:layout_width="218dp"
+                        android:layout_height="326dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/detail2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/xurl_product_image2"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/xurl_product_image4"
+                        android:layout_width="218dp"
+                        android:layout_height="326dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/detail2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/xurl_product_image3"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/xurl_product_image5"
+                        android:layout_width="218dp"
+                        android:layout_height="326dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/detail2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/xurl_product_image4"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/xurl_product_image6"
+                        android:layout_width="218dp"
+                        android:layout_height="326dp"
+                        android:layout_marginEnd="16dp"
+                        android:src="@drawable/detail2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@+id/xurl_product_image5"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </LinearLayout>
             </HorizontalScrollView>
 

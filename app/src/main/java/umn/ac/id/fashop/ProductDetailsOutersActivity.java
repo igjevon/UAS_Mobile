@@ -22,9 +22,9 @@ import com.squareup.picasso.Picasso;
 public class ProductDetailsOutersActivity extends AppCompatActivity {
     Button addToCart;
     TextView xnama_barang, xharga, xukuran, xbahan, xld, xlengan, xpanjang;
-    ImageView xurl_product_image1;
-    //            xurl_product_image2, xurl_product_image3,
-//            xurl_product_image4, xurl_product_image5, xurl_product_image6, xurl_product_image7;
+    ImageView xurl_product_image1,
+            xurl_product_image2, xurl_product_image3,
+            xurl_product_image4, xurl_product_image5, xurl_product_image6;
     LinearLayout button_back;
 
     DatabaseReference reference;
@@ -35,12 +35,11 @@ public class ProductDetailsOutersActivity extends AppCompatActivity {
         button_back = findViewById(R.id.button_back);
 
         xurl_product_image1 = findViewById(R.id.xurl_product_image1);
-//        xurl_product_image2 = findViewById(R.id.xurl_product_image2);
-//        xurl_product_image3 = findViewById(R.id.xurl_product_image3);
-//        xurl_product_image4 = findViewById(R.id.xurl_product_image4);
-//        xurl_product_image5 = findViewById(R.id.xurl_product_image5);
-//        xurl_product_image6 = findViewById(R.id.xurl_product_image6);
-//        xurl_product_image7 = findViewById(R.id.xurl_product_image7);
+        xurl_product_image2 = findViewById(R.id.xurl_product_image2);
+        xurl_product_image3 = findViewById(R.id.xurl_product_image3);
+        xurl_product_image4 = findViewById(R.id.xurl_product_image4);
+        xurl_product_image5 = findViewById(R.id.xurl_product_image5);
+        xurl_product_image6 = findViewById(R.id.xurl_product_image6);
 
         xnama_barang = findViewById(R.id.xnama_barang);
         xharga = findViewById(R.id.xharga);
@@ -72,33 +71,27 @@ public class ProductDetailsOutersActivity extends AppCompatActivity {
                             Picasso.get()
                                     .load(dataSnapshot.child("url_product_image1")
                                             .getValue().toString()).centerCrop().fit().into(xurl_product_image1);
+                            Picasso.get()
+                                    .load(dataSnapshot.child("url_product_image2")
+                                            .getValue().toString()).centerCrop().fit().into(xurl_product_image2);
+                            Picasso.get()
+                                    .load(dataSnapshot.child("url_product_image3")
+                                            .getValue().toString()).centerCrop().fit().into(xurl_product_image3);
+                            Picasso.get()
+                                    .load(dataSnapshot.child("url_product_image4")
+                                            .getValue().toString()).centerCrop().fit().into(xurl_product_image4);
+                            Picasso.get()
+                                    .load(dataSnapshot.child("url_product_image5")
+                                            .getValue().toString()).centerCrop().fit().into(xurl_product_image5);
+                            Picasso.get()
+                                    .load(dataSnapshot.child("url_product_image6")
+                                            .getValue().toString()).centerCrop().fit().into(xurl_product_image6);
                         } else {
                             Toast.makeText(ProductDetailsOutersActivity.this, "Data do not exists...", Toast.LENGTH_SHORT).show();
                         }
                     } else {
                         Toast.makeText(ProductDetailsOutersActivity.this, "Does not exists..........", Toast.LENGTH_SHORT).show();
                     }
-//                    Picasso.get()
-//                            .load(dataSnapshot.child("url_product_image1")
-//                                    .getValue().toString()).centerCrop().fit().into(xurl_product_image1);
-                    //                Picasso.with(ProductDetailsActivity.this)
-                    //                        .load(dataSnapshot.child("url_product_image2")
-                    //                                .getValue().toString()).centerCrop().fit().into(xurl_product_image2);
-                    //                Picasso.with(ProductDetailsActivity.this)
-                    //                        .load(dataSnapshot.child("url_product_image3")
-                    //                                .getValue().toString()).centerCrop().fit().into(xurl_product_image3);
-                    //                Picasso.with(ProductDetailsActivity.this)
-                    //                        .load(dataSnapshot.child("url_product_image4")
-                    //                                .getValue().toString()).centerCrop().fit().into(xurl_product_image4);
-                    //                Picasso.with(ProductDetailsActivity.this)
-                    //                        .load(dataSnapshot.child("url_product_image5")
-                    //                                .getValue().toString()).centerCrop().fit().into(xurl_product_image5);
-                    //                Picasso.with(ProductDetailsActivity.this)
-                    //                        .load(dataSnapshot.child("url_product_image6")
-                    //                                .getValue().toString()).centerCrop().fit().into(xurl_product_image6);
-                    //                Picasso.with(ProductDetailsActivity.this)
-                    //                        .load(dataSnapshot.child("url_product_image7")
-                    //                                .getValue().toString()).centerCrop().fit().into(xurl_product_image7);
                 }
 
                 @Override

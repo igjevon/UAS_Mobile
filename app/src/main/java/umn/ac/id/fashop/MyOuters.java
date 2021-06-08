@@ -1,16 +1,10 @@
 package umn.ac.id.fashop;
 
 public class MyOuters {
-    String nama_barang, ukuran;
+    String nama_barang, ukuran, url_product_image1;
     Integer harga;
 
     public MyOuters() {
-    }
-
-    public MyOuters(String nama_barang, String ukuran, Integer harga) {
-        this.nama_barang = nama_barang;
-        this.ukuran = ukuran;
-        this.harga = harga;
     }
 
     public String getNama_barang() {
@@ -27,6 +21,14 @@ public class MyOuters {
 
     public void setUkuran(String ukuran) {
         this.ukuran = ukuran;
+    }
+
+    public String getUrl_product_image1() {
+        return url_product_image1;
+    }
+
+    public void setUrl_product_image1(String url_product_image1) {
+        this.url_product_image1 = url_product_image1;
     }
 
     public Integer getHarga() {
