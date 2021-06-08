@@ -35,7 +35,12 @@ public class CheckoutActivity extends AppCompatActivity {
     Integer valuetotalharga = 0;
     Integer valuehargaproduk = 0;
 
-    DatabaseReference reference, reference2, reference3, reference4;
+    DatabaseReference reference, reference3;
+
+    Calendar calendar;
+
+    String date;
+    SimpleDateFormat dateFormat;
 
     String USERNAME_KEY = "usernamekey";
     String username_key = "";
@@ -133,6 +138,11 @@ public class CheckoutActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Menyimpan data user kepada firebase dan membuat table baru "MyHistory"
+                calendar = Calendar.getInstance();
+
+                dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+                date = dateFormat.format(calendar.getTime());
+
                 reference3 = FirebaseDatabase.getInstance()
                         .getReference().child("MyHistory")
                         .child(username_key_new).child(xnama_barang.getText().toString() + nomor_transaksi);
@@ -144,6 +154,7 @@ public class CheckoutActivity extends AppCompatActivity {
                         reference3.getRef().child("ukuran").setValue(xukuran.getText().toString());
                         reference3.getRef().child("jumlah").setValue(valuejumlahproduk);
                         reference3.getRef().child("harga").setValue(valuetotalharga);
+                        reference3.getRef().child("tanggal_order").setValue(date);
 
                         Intent gotopayment = new Intent(CheckoutActivity.this, PaymentActivity.class);
                         startActivity(gotopayment);
