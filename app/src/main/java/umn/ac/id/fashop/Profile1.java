@@ -48,6 +48,7 @@ public class Profile1 extends AppCompatActivity {
         nama_lengkap = findViewById(R.id.nama_lengkap);
         photo_profile = findViewById(R.id.photo_profile);
         email_address = findViewById(R.id.email_address);
+        btn_location = findViewById(R.id.btn_location);
 
         reference = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(username_key_new);

@@ -32,7 +32,7 @@
 
     <ImageView
         android:id="@+id/app_logo"
-        android:layout_width="379dp"
+        android:layout_width="279dp"
         android:layout_height="203dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="264dp"
