@@ -25,7 +25,7 @@
             <View
                 android:id="@+id/view_backshop"
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
+                android:layout_height="200dp"
                 android:background="@drawable/backshop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
+                android:layout_height="200dp"
                 android:background="@drawable/bg_gradient_primary_blue"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -47,7 +47,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="29dp"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="90dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -61,7 +61,7 @@
                 android:id="@+id/nama_lengkap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="90dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:textColor="#FFF"
                 android:textSize="18sp"
