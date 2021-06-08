@@ -3,12 +3,17 @@ package umn.ac.id.fashop;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -25,12 +30,13 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
+
 import android.util.Log;
 
 public class RegisterTwoAct extends AppCompatActivity {
     LinearLayout btn_back;
     ImageView pic_photo_register_user;
-    Button btn_continue, btn_add_photo;
+    Button btn_continue, btn_add_image;
     EditText nama_lengkap, address, phone_number;
 
     Uri photo_location;
@@ -52,14 +58,14 @@ public class RegisterTwoAct extends AppCompatActivity {
 
         btn_continue = findViewById(R.id.btn_continue);
         btn_back = findViewById(R.id.button_back);
-        btn_add_photo = findViewById(R.id.btn_add_photo);
+        btn_add_image = findViewById(R.id.btn_add_image);
 
         pic_photo_register_user = findViewById(R.id.pic_photo_register_user);
         nama_lengkap = findViewById(R.id.nama_lengkap);
         address = findViewById(R.id.address);
         phone_number = findViewById(R.id.phone_number);
 
-        btn_add_photo.setOnClickListener(new View.OnClickListener() {
+        btn_add_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 findPhoto();
@@ -154,5 +160,4 @@ public class RegisterTwoAct extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
         username_key_new = sharedPreferences.getString(username_key, "");
     }
-
 }
