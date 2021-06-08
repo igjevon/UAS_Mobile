@@ -1,18 +1,17 @@
 package umn.ac.id.fashop;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.PointerIcon;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,8 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import umn.ac.id.fashop.ProductDetailsActivity;
-import umn.ac.id.fashop.R;
+import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
     LinearLayout go_to_tops;
@@ -34,7 +32,11 @@ public class HomeActivity extends AppCompatActivity {
     TextView nama_lengkap, user_balance;
     TextView go_to_profile;
 
-    DatabaseReference reference;
+    RecyclerView my_promo;
+    ArrayList<MyPromo> list;
+    PromoAdapter promoAdapter;
+
+    DatabaseReference reference, reference2;
 
     String USERNAME_KEY = "usernamekey";
     String username_key = "";
@@ -117,6 +119,28 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gotomyProfile = new Intent(HomeActivity.this, Profile1.class);
                 startActivity(gotomyProfile);
+            }
+        });
+        my_promo = findViewById(R.id.my_promo);
+        my_promo.setLayoutManager(new LinearLayoutManager(this));
+        list = new ArrayList<MyPromo>();
+
+        reference2 = FirebaseDatabase.getInstance().getReference().child("MyPromo");
+
+        reference2.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for(DataSnapshot dataSnapshot1: snapshot.getChildren()){
+                    MyPromo p = dataSnapshot1.getValue(MyPromo.class);
+                    list.add(p);
+                    promoAdapter = new PromoAdapter(HomeActivity.this, list);
+                    my_promo.setAdapter(promoAdapter);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }

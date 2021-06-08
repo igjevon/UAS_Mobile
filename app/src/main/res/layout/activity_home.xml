@@ -316,10 +316,7 @@
                     android:id="@+id/item_promo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="70dp"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     app:layout_constraintTop_toBottomOf="@+id/tv_womanOuters">
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -329,89 +326,6 @@
 
                     </androidx.recyclerview.widget.RecyclerView>
                 </LinearLayout>
-
-<!--                <LinearLayout-->
-<!--                    android:layout_width="225dp"-->
-<!--                    android:layout_height="320dp"-->
-<!--                    android:orientation="horizontal">-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:orientation="vertical"-->
-<!--                        android:padding="10dp">-->
-
-<!--                        <ImageView-->
-<!--                            android:layout_width="140dp"-->
-<!--                            android:layout_height="195dp"-->
-<!--                            android:src="@drawable/promo5" />-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="Oversized Sweater"-->
-<!--                            android:textColor="@color/grayPrimary"-->
-<!--                            android:textSize="14sp"-->
-<!--                            android:fontFamily="@font/montserrat_regular"/>-->
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="Rp 129.000"-->
-<!--                            android:textColor="@color/grayPrimary"-->
-<!--                            android:textSize="12sp"-->
-<!--                            android:fontFamily="@font/montserrat_regular"/>-->
-<!--                    </LinearLayout>-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:orientation="vertical"-->
-<!--                        android:padding="10dp">-->
-<!--                        <ImageView-->
-<!--                            android:layout_width="140dp"-->
-<!--                            android:layout_height="195dp"-->
-<!--                            android:src="@drawable/promo1" />-->
-<!--                        <TextView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="Sporty Suit"-->
-<!--                            android:textColor="@color/grayPrimary"-->
-<!--                            android:textSize="14sp"-->
-<!--                            android:fontFamily="@font/montserrat_regular" />-->
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="Rp 249.000"-->
-<!--                            android:textColor="@color/grayPrimary"-->
-<!--                            android:textSize="12sp"-->
-<!--                            android:fontFamily="@font/montserrat_regular" />-->
-<!--                    </LinearLayout>-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:orientation="vertical"-->
-<!--                        android:padding="10dp">-->
-<!--                        <ImageView-->
-<!--                            android:layout_width="140dp"-->
-<!--                            android:layout_height="195dp"-->
-<!--                            android:src="@drawable/promo3" />-->
-<!--                        <TextView-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="Leather Jacket"-->
-<!--                            android:textColor="@color/grayPrimary"-->
-<!--                            android:textSize="14sp"-->
-<!--                            android:fontFamily="@font/montserrat_regular" />-->
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:text="Rp 149.000"-->
-<!--                            android:textColor="@color/grayPrimary"-->
-<!--                            android:textSize="12sp"-->
-<!--                            android:fontFamily="@font/montserrat_regular" />-->
-<!--                    </LinearLayout>-->
-<!--                </LinearLayout>-->
             </HorizontalScrollView>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

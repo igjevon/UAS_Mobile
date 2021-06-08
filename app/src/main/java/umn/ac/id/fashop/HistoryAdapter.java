@@ -36,12 +36,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.MyViewHo
         holder.xukuran.setText(myHistory.get(position).getUkuran());
 
         final String getNamaBarang = myHistory.get(position).getNama_barang();
-
-        holder.itemView.setOnClickListener(v -> {
-            Intent goToHistoryOrderDetails = new Intent(context, MyHistoryDetailActivity.class);
-            goToHistoryOrderDetails.putExtra("nama_barang", getNamaBarang);
-            context.startActivity(goToHistoryOrderDetails);
-        });
     }
 
     @Override

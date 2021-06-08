@@ -119,7 +119,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoback = new Intent(ProductDetailsActivity.this, ListProductActivity.class);
+                Intent gotoback = new Intent(ProductDetailsActivity.this, Tops_Activity.class);
                 startActivity(gotoback);
             }
         });
