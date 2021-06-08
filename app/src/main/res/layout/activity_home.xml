@@ -8,15 +8,13 @@
     tools:context=".HomeActivity">
 
     <ScrollView
-        android:scrollbars="none"
-        android:paddingBottom="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
         android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:scrollbars="none"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -25,190 +23,233 @@
             android:layout_height="wrap_content">
 
             <View
-                android:id="@+id/view"
+                android:id="@+id/view_backshop"
                 android:layout_width="match_parent"
-                android:layout_height="310dp"
-                android:background="@drawable/bg_gradient_primary_blue"
+                android:layout_height="200dp"
+                android:background="@drawable/backshop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="8dp"
-                android:fontFamily="sans-serif-black"
-                android:text="My Dashboard"
-                android:textAlignment="center"
-                android:textColor="#FFF"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/view" />
-
-            <com.github.florent37.shapeofview.shapes.CircleView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="29dp"
-                android:layout_marginTop="85dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-                <ImageView
-                    android:id="@+id/pic_photo_home_user_circled"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/jongki_man" />
-            </com.github.florent37.shapeofview.shapes.CircleView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="32dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="Nama Pengguna"
-                android:textColor="#FFF"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView2"
-                app:layout_constraintTop_toBottomOf="@id/textView2" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="16dp"
-                android:fontFamily="sans-serif-medium"
-                android:text="IDR 287.000"
-                android:textColor="@color/greenPrimary"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textView2" />
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="112dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/bg_layout_white"
-                android:orientation="vertical"
-                android:paddingLeft="24dp"
-                android:paddingTop="30dp"
-                android:paddingRight="24dp"
-                android:paddingBottom="30dp"
+                android:layout_height="200dp"
+                android:background="@drawable/bg_gradient_primary_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Main Menu"
-                    android:textColor="@color/blackPrimary"
-                    android:textSize="28sp" />
+            <com.github.florent37.shapeofview.shapes.CircleView
+                android:id="@+id/circleView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="90dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Stay Home and Shop Online"
-                    android:textColor="@color/grayPrimary"
-                    android:textSize="16sp" />
+                <ImageView
+                    android:id="@+id/pic_photo_home_user_circled"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+            </com.github.florent37.shapeofview.shapes.CircleView>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="#EDEDED" />
+            <TextView
+                android:id="@+id/nama_lengkap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="90dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/view_backshop"
+                app:layout_constraintHorizontal_bias="0.056"
+                app:layout_constraintStart_toEndOf="@+id/circleView"
+                app:layout_constraintTop_toTopOf="@id/view_backshop" />
+
+            <TextView
+                android:id="@+id/go_to_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="My Profile"
+                android:textColor="#edebeb"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/circleView"
+                app:layout_constraintTop_toBottomOf="@id/nama_lengkap" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="24dp"
+                android:text="Stay Home and Shop Online"
+                android:textColor="@color/blackPrimary"
+                android:textSize="22sp"
+                android:fontFamily="@font/montserrat_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.036"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_backshop" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollview_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:id="@+id/go_to_tops"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:padding="10dp">
 
-                    <LinearLayout
-                        android:id="@+id/man_view"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/jongki_man"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Men"
-                            android:textColor="@color/blackPrimary"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="10dp">
 
                         <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/yeobeen_woman" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Women"
-                            android:textColor="@color/blackPrimary"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
+                            android:layout_width="130dp"
+                            android:layout_height="195dp"
+                            android:src="@drawable/top" />
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="80dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/munel_kids" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Kids"
-                            android:textColor="@color/blackPrimary"
-                            android:textSize="16sp" />
+                        android:layout_marginTop="4dp"
+                        android:text="Tops"
+                        android:textColor="@color/blackPrimary"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/montserrat_semibold"/>
                     </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/go_to_bottoms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:padding="10dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="129dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="10dp">
+                        <ImageView
+                            android:layout_width="129dp"
+                            android:layout_height="195dp"
+                            android:src="@drawable/xbottom" />
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Bottoms"
+                        android:gravity="center"
+                        android:textColor="@color/blackPrimary"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/montserrat_semibold"/>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/go_to_dresses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:padding="10dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="10dp">
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="195dp"
+                            android:src="@drawable/xdress" />
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Dresses"
+                        android:gravity="center"
+                        android:textColor="@color/blackPrimary"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/montserrat_semibold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/go_to_outers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:padding="10dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="130dp"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="8dp"
+                        android:elevation="10dp">
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="195dp"
+                            android:src="@drawable/xouter" />
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Outers"
+                        android:gravity="center"
+                        android:textColor="@color/blackPrimary"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/montserrat_semibold"/>
+                </LinearLayout>
+
             </LinearLayout>
+            </HorizontalScrollView>
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="18dp"
                 android:text="New This Week"
                 android:textColor="@color/blackPrimary"
                 android:textSize="28sp"
+                android:fontFamily="@font/montserrat_bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                app:layout_constraintTop_toBottomOf="@+id/scrollview_category" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -219,14 +260,15 @@
                 android:text="Fashion start IDR 49.999 *Free Delivery"
                 android:textColor="@color/grayPrimary"
                 android:textSize="16sp"
+                android:fontFamily="@font/montserrat_regular"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
             <HorizontalScrollView
-                android:layout_width="369dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="25dp"
                 android:scrollbars="none"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -234,21 +276,23 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView6">
 
                 <LinearLayout
+                    android:id="@+id/item_promo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_womanOuters">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
 
-                    <ImageView
-                        android:layout_width="170dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="24dp"
-                        android:src="@drawable/iu_dress" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/my_promo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="130dp"
-                        android:layout_marginRight="15dp"
-                        android:src="@drawable/shoes" />
+                    </androidx.recyclerview.widget.RecyclerView>
                 </LinearLayout>
             </HorizontalScrollView>
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,9 +33,9 @@
         android:id="@+id/emblem_app"
         android:layout_width="325dp"
         android:layout_height="165dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="104dp"
         android:src="@drawable/logo1"
+        app:layout_constraintEnd_toEndOf="@id/view"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view" />
 
@@ -50,6 +50,7 @@
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/signin"
         android:textAlignment="center"
+        android:fontFamily="@font/montserrat_semibold"
         android:textColor="#FFF"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,7 +58,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emblem_app"
-        app:layout_constraintVertical_bias="0.306" />
+        app:layout_constraintVertical_bias="0.529" />
 
     <Button
         android:id="@+id/btn_new_account_create"
@@ -66,6 +67,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="112dp"
+        android:fontFamily="@font/montserrat_semibold"
         android:background="@drawable/bg_overlay_newaccount"
         android:gravity="center_horizontal|center_vertical"
         android:text="NEW ACCOUNT"

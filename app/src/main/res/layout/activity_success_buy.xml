@@ -6,13 +6,30 @@
     android:layout_height="match_parent"
     android:background="@color/bgPrimary"
     tools:context=".SuccessBuyActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView_tops"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
     <ImageView
         android:id="@+id/success_buy"
-        android:layout_width="276dp"
-        android:layout_height="320dp"
+        android:layout_width="236dp"
+        android:layout_height="270dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/success_buy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,11 +40,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="10dp"
         android:text="Success !"
         android:textAlignment="center"
         android:textColor="@color/blackPrimary"
-        android:textSize="28sp"
+        android:textSize="32sp"
+        android:fontFamily="@font/montserrat_extrabold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/success_buy"/>
@@ -37,12 +55,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:lineSpacingExtra="9dp"
         android:text="Your order will be delivered soon.\nThank you for choosing our app !"
         android:textAlignment="center"
         android:textColor="@color/grayPrimary"
         android:textSize="20sp"
+        android:fontFamily="@font/montserrat_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSuccess" />
@@ -52,11 +71,12 @@
         android:layout_height="55dp"
         android:layout_marginEnd="48dp"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/bg_layout_redthird"
         android:text="CONTINUE SHOPPING"
         android:textColor="#FFF"
         android:textSize="20sp"
+        android:fontFamily="@font/montserrat_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvOrderMessage" />
@@ -71,8 +91,14 @@
         android:text="VIEW ORDER"
         android:textColor="#8B3A2B"
         android:textSize="20sp"
+        android:fontFamily="@font/montserrat_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnContinueShopping" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

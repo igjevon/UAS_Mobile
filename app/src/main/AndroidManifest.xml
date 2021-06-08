@@ -1,20 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="umn.ac.id.fashop">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">        >
-        <activity android:name=".SuccessBuyActivity"></activity>
-        <activity android:name=".ListProductActivity" />
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".CheckoutOutersActivity"></activity>
+        <activity android:name=".CheckoutDressesActivity" />
+        <activity android:name=".CheckoutBottomsActivity" />
+        <activity android:name=".ProductDetailsOutersActivity"></activity>
+        <activity android:name=".ProductDetailsDressesActivity" />
+        <activity android:name=".ProductDetailsBottomsActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".Outers_Activity" />
+        <activity android:name=".Profile1" />
+        <activity android:name=".MyHistoryDetailActivity" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".Dresses_Activity" />
+        <activity android:name=".Bottoms_Activity" />
+        <activity android:name=".Tops_Activity" />
+        <activity android:name=".EditProfileAct" />
+        <activity android:name=".SuccessBuyActivity" />
         <activity android:name=".ProductDetailsActivity" />
         <activity android:name=".CheckoutActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".SuccessRegisterAct" />
         <activity android:name=".RegisterTwoAct" />
         <activity android:name=".RegisterOneAct" />
         <activity android:name=".SigninAct" />
@@ -26,6 +63,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="umn.ac.id.fashop.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/path">
+            </meta-data>
+        </provider>
     </application>
-
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 </manifest>

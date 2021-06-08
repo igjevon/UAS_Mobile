@@ -7,5 +7,8 @@
     <string name="email_label">Email Address</string>
     <string name="name_label">Name</string>
     <string name="bio_label">Biodata</string>
+    <string name="address_label">Address</string>
     <string name="explore">EXPLORE NOW</string>
+    <string name="phonenumber">Phone Number</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

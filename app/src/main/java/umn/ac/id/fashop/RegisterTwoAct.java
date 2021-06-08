@@ -3,17 +3,23 @@ package umn.ac.id.fashop;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -25,10 +31,13 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import android.util.Log;
+
 public class RegisterTwoAct extends AppCompatActivity {
-    ImageView btn_back, pic_photo_register_user;
-    Button btn_continue, btn_add_photo;
-    EditText bio, nama_lengkap;
+    LinearLayout btn_back;
+    ImageView pic_photo_register_user;
+    Button btn_continue, btn_add_image;
+    EditText nama_lengkap, address, phone_number;
 
     Uri photo_location;
     Integer photo_max = 1;
@@ -47,14 +56,16 @@ public class RegisterTwoAct extends AppCompatActivity {
 
         getUsernameLocal();
 
-        btn_continue=findViewById(R.id.btn_continue);
-        btn_back = findViewById(R.id.btn_back);
-        btn_add_photo = findViewById(R.id.btn_add_photo);
-        pic_photo_register_user = findViewById(R.id.pic_photo_register_user);
-        bio=findViewById(R.id.bio);
-        nama_lengkap=findViewById(R.id.nama_lengkap);
+        btn_continue = findViewById(R.id.btn_continue);
+        btn_back = findViewById(R.id.button_back);
+        btn_add_image = findViewById(R.id.btn_add_image);
 
-        btn_add_photo.setOnClickListener(new View.OnClickListener() {
+        pic_photo_register_user = findViewById(R.id.pic_photo_register_user);
+        nama_lengkap = findViewById(R.id.nama_lengkap);
+        address = findViewById(R.id.address);
+        phone_number = findViewById(R.id.phone_number);
+
+        btn_add_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 findPhoto();
@@ -75,7 +86,7 @@ public class RegisterTwoAct extends AppCompatActivity {
 
                 // validasi untuk file (apakah ada?)
                 if(photo_location != null) {
-                    StorageReference storageReference1 =
+                    final StorageReference storageReference1 =
                             storage.child(System.currentTimeMillis() + "." +
                                     getFileExtension(photo_location));
 
@@ -83,17 +94,29 @@ public class RegisterTwoAct extends AppCompatActivity {
                             .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            String uri_photo = taskSnapshot.getMetadata().getReference().getDownloadUrl().toString();
-                            reference.getRef().child("url_photo_profile").setValue(uri_photo);
-                            reference.getRef().child("nama_lengkap").setValue(nama_lengkap.getText().toString());
-                            reference.getRef().child("bio").setValue(bio.getText().toString());
+                            storageReference1.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    String uri_photo = uri.toString();
+                                    reference.getRef().child("url_photo_profile").setValue(uri_photo);
+                                    reference.getRef().child("nama_lengkap").setValue(nama_lengkap.getText().toString());
+                                    reference.getRef().child("address").setValue(address.getText().toString());
+                                    reference.getRef().child("phone_number").setValue(phone_number.getText().toString());
+                                }
+                            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Uri> task) {
+                                    //berpindah activity
+                                    Intent gotosuccess = new Intent(RegisterTwoAct.this, HomeActivity.class);
+                                    startActivity(gotosuccess);
+                                }
+                            });
+
                         }
                     }).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-                            //berpindah activity
-                            Intent gotosuccess = new Intent(RegisterTwoAct.this, HomeActivity.class);
-                            startActivity(gotosuccess);
+
                         }
                     });
                 }
@@ -129,7 +152,7 @@ public class RegisterTwoAct extends AppCompatActivity {
         if(requestCode == photo_max && resultCode == RESULT_OK && data != null && data.getData() != null)
         {
             photo_location = data.getData();
-            Picasso.with(this).load(photo_location).centerCrop().fit().into(pic_photo_register_user);
+            Picasso.get().load(photo_location).centerCrop().fit().into(pic_photo_register_user);
         }
     }
 
@@ -137,5 +160,4 @@ public class RegisterTwoAct extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(USERNAME_KEY, MODE_PRIVATE);
         username_key_new = sharedPreferences.getString(username_key, "");
     }
-
 }
