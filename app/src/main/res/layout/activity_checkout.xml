@@ -78,6 +78,11 @@
                     android:textSize="20sp"
                     android:textColor="@color/grayPrimary"
                     android:fontFamily="@font/montserrat_regular"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
                 <Button
                     android:id="@+id/btn_minus"
                     android:layout_marginLeft="20dp"
