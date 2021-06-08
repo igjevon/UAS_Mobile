@@ -28,8 +28,8 @@ public class HomeActivity extends AppCompatActivity {
     LinearLayout go_to_dresses;
     LinearLayout go_to_outers;
 
-    ImageView pic_photo_home_user_circled, chat;
-    TextView nama_lengkap, user_balance;
+    ImageView pic_photo_home_user_circled;
+    TextView nama_lengkap;
     TextView go_to_profile;
 
     RecyclerView my_promo;
@@ -52,8 +52,6 @@ public class HomeActivity extends AppCompatActivity {
 
         pic_photo_home_user_circled = findViewById(R.id.pic_photo_home_user_circled);
         nama_lengkap = findViewById(R.id.nama_lengkap);
-        user_balance = findViewById(R.id.user_balance);
-        chat = findViewById(R.id.chat);
         go_to_profile = findViewById(R.id.go_to_profile);
 
 //        LinearLayoutManager layoutManager = new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false);
@@ -68,7 +66,6 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 nama_lengkap.setText(dataSnapshot.child("nama_lengkap").getValue().toString());
-                user_balance.setText("Rp " + dataSnapshot.child("user_balance").getValue().toString());
                 Picasso.get()
                         .load(dataSnapshot.child("url_photo_profile")
                                 .getValue().toString()).centerCrop().fit()
@@ -109,14 +106,6 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gotoOutersIntent = new Intent(HomeActivity.this, Outers_Activity.class);
                 startActivity(gotoOutersIntent);
-            }
-        });
-
-        chat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotochat = new Intent(HomeActivity.this, ChatActivity.class);
-                startActivity(gotochat);
             }
         });
 

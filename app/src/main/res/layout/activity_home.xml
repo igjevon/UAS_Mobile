@@ -42,31 +42,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
-            <LinearLayout
-                android:id="@+id/logoatas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginEnd="15dp"
-                android:layout_marginTop="40dp"
-                app:layout_constraintEnd_toEndOf="@+id/view_backshop"
-                app:layout_constraintTop_toTopOf="@id/view_backshop">
-
-                <ImageView
-                    android:id="@+id/cart"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_shopping_cart_24"/>
-
-                <ImageView
-                    android:id="@+id/chat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:src="@drawable/ic_baseline_chat_24"/>
-
-            </LinearLayout>
-
             <com.github.florent37.shapeofview.shapes.CircleView
                 android:id="@+id/circleView"
                 android:layout_width="60dp"
@@ -86,14 +61,14 @@
                 android:id="@+id/nama_lengkap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="56dp"
+                android:layout_marginTop="120dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:textColor="#FFF"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toStartOf="@+id/user_balance"
-                app:layout_constraintHorizontal_bias="0.179"
+                app:layout_constraintEnd_toEndOf="@id/view_backshop"
+                app:layout_constraintHorizontal_bias="0.056"
                 app:layout_constraintStart_toEndOf="@+id/circleView"
-                app:layout_constraintTop_toBottomOf="@id/logoatas" />
+                app:layout_constraintTop_toTopOf="@id/view_backshop" />
 
             <TextView
                 android:id="@+id/go_to_profile"
@@ -107,18 +82,6 @@
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/circleView"
                 app:layout_constraintTop_toBottomOf="@id/nama_lengkap" />
-
-            <TextView
-                android:id="@+id/user_balance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="56dp"
-                android:layout_marginEnd="15dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:textColor="#FFF"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/logoatas" />
 
             <TextView
                 android:id="@+id/textView10"
