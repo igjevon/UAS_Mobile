@@ -36,9 +36,9 @@ public class OutersAdapter extends RecyclerView.Adapter<OutersAdapter.MyViewHold
         final String getNamaBarang = myOuters.get(position).getNama_barang();
 
         holder.itemView.setOnClickListener(v -> {
-            Intent goToHistoryOrderDetails = new Intent(context, MyHistoryDetailActivity.class);
-            goToHistoryOrderDetails.putExtra("nama_barang", getNamaBarang);
-            context.startActivity(goToHistoryOrderDetails);
+            Intent goToProductDetails = new Intent(context, ProductDetailsOutersActivity.class);
+            goToProductDetails.putExtra("nama_barang", getNamaBarang);
+            context.startActivity(goToProductDetails);
         });
     }
 

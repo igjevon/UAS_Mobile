@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgPrimary"
-    tools:context=".ProductDetailsActivity">
+    tools:context=".ProductDetailsOutersActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -115,7 +115,6 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginStart="12dp"
                 android:textColor="@color/blackPrimary"
-                android:fontFamily="@font/montserrat_semibold"
                 android:textSize="25sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.088"
@@ -163,14 +162,14 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/title_detail1" />
 
-                <TextView
-                    android:id="@+id/xukuran"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:textColor="@color/graydark"
-                    android:fontFamily="@font/monserrat_regular"
-                    android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/xukuran"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/graydark"
+                        android:fontFamily="@font/monserrat_regular"
+                        android:textSize="18sp" />
 
                 <LinearLayout
                     android:layout_marginTop="4dp"
@@ -322,4 +321,5 @@
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

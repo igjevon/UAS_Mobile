@@ -36,9 +36,9 @@ public class BottomsAdapter extends RecyclerView.Adapter<BottomsAdapter.MyViewHo
     final String getNamaBarang = myBottoms.get(position).getNama_barang();
 
             holder.itemView.setOnClickListener(v -> {
-                Intent goToHistoryOrderDetails = new Intent(context, MyHistoryDetailActivity.class);
-                goToHistoryOrderDetails.putExtra("nama_barang", getNamaBarang);
-                context.startActivity(goToHistoryOrderDetails);
+                Intent goToProductDetails = new Intent(context, ProductDetailsBottomsActivity.class);
+                goToProductDetails.putExtra("nama_barang", getNamaBarang);
+                context.startActivity(goToProductDetails);
                 });
             }
 

@@ -36,9 +36,9 @@ public class DressesAdapter extends RecyclerView.Adapter<DressesAdapter.MyViewHo
         final String getNamaBarang = myDresses.get(position).getNama_barang();
 
         holder.itemView.setOnClickListener(v -> {
-            Intent goToHistoryOrderDetails = new Intent(context, MyHistoryDetailActivity.class);
-            goToHistoryOrderDetails.putExtra("nama_barang", getNamaBarang);
-            context.startActivity(goToHistoryOrderDetails);
+            Intent goToProductDetails = new Intent(context, ProductDetailsDressesActivity.class);
+            goToProductDetails.putExtra("nama_barang", getNamaBarang);
+            context.startActivity(goToProductDetails);
         });
     }
 

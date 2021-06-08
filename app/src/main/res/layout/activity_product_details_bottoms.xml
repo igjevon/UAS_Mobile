@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgPrimary"
-    tools:context=".ProductDetailsActivity">
+    tools:context=".ProductDetailsBottomsActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -207,11 +207,11 @@
                         android:layout_marginTop="4dp"
                         android:textColor="@color/graydark"
                         android:fontFamily="@font/monserrat_regular"
-                        android:text="Bust : "
+                        android:text="Waist : "
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/xld"
+                        android:id="@+id/xpinggang"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
@@ -235,7 +235,7 @@
                         android:textSize="18sp" />
 
                     <TextView
-                        android:id="@+id/xlengan"
+                        android:id="@+id/xpinggul"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/graydark"
@@ -314,7 +314,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:background="@drawable/bg_layout_redthird"
-                        android:text="BUY NOW"
+                        android:text="ADD TO CART"
                         android:textColor="#FFF"
                         android:textSize="20sp"/>
 
@@ -322,4 +322,5 @@
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
