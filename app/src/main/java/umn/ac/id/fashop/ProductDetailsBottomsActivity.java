@@ -28,10 +28,12 @@ public class ProductDetailsBottomsActivity extends AppCompatActivity {
     LinearLayout button_back;
 
     DatabaseReference reference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details_bottoms);
+
         button_back = findViewById(R.id.button_back);
 
         xurl_product_image1 = findViewById(R.id.xurl_product_image1);
@@ -108,10 +110,13 @@ public class ProductDetailsBottomsActivity extends AppCompatActivity {
         }
 
         addToCart = findViewById(R.id.addToCart);
-        addToCart.setOnClickListener(v -> {
-            Intent toCheckout = new Intent(ProductDetailsBottomsActivity.this, CheckoutActivity.class);
-            toCheckout.putExtra("checkout_barang", barang_baru);
-            startActivity(toCheckout);
+        addToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotocheckout = new Intent(ProductDetailsBottomsActivity.this, CheckoutBottomsActivity.class);
+                gotocheckout.putExtra("nama_barang", barang_baru);
+                startActivity(gotocheckout);
+            }
         });
 
         button_back.setOnClickListener(new View.OnClickListener() {

@@ -110,10 +110,13 @@ public class ProductDetailsActivity extends AppCompatActivity {
         }
 
         addToCart = findViewById(R.id.addToCart);
-        addToCart.setOnClickListener(v -> {
-            Intent toCheckout = new Intent(ProductDetailsActivity.this, CheckoutActivity.class);
-            toCheckout.putExtra("checkout_barang", barang_baru);
-            startActivity(toCheckout);
+        addToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotocheckout = new Intent(ProductDetailsActivity.this, CheckoutActivity.class);
+                gotocheckout.putExtra("nama_barang", barang_baru);
+                startActivity(gotocheckout);
+            }
         });
 
         button_back.setOnClickListener(new View.OnClickListener() {

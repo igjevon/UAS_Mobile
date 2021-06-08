@@ -21,6 +21,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".CheckoutOutersActivity"></activity>
+        <activity android:name=".CheckoutDressesActivity" />
+        <activity android:name=".CheckoutBottomsActivity" />
         <activity android:name=".ProductDetailsOutersActivity"></activity>
         <activity android:name=".ProductDetailsDressesActivity" />
         <activity android:name=".ProductDetailsBottomsActivity" />
