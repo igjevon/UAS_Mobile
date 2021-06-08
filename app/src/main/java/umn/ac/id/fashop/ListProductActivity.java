@@ -33,22 +33,22 @@ public class ListProductActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_product);
 
-        nama_barang = findViewById(R.id.nama_barang);
-        ukuran = findViewById(R.id.ukuran);
-        harga = findViewById(R.id.harga);
-        url_product_image1 = findViewById(R.id.url_product_image1);
-
-        //viewListProduct = findViewById(R.id.viewListProduct);
-
-        //reference = FirebaseDatabase.getInstance().getReference().child("MyHistory").child(username_key_new);
-        //reference.addListenerForSingleValueEvent(new ValueEventListener() {
-
-        button_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoback = new Intent(ListProductActivity.this, HomeActivity.class);
-                startActivity(gotoback);
-            }
-        });
+//        nama_barang = findViewById(R.id.nama_barang);
+//        ukuran = findViewById(R.id.ukuran);
+//        harga = findViewById(R.id.harga);
+//        url_product_image1 = findViewById(R.id.url_product_image1);
+//
+//        //viewListProduct = findViewById(R.id.viewListProduct);
+//
+//        //reference = FirebaseDatabase.getInstance().getReference().child("MyHistory").child(username_key_new);
+//        //reference.addListenerForSingleValueEvent(new ValueEventListener() {
+//
+//        button_back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent gotoback = new Intent(ListProductActivity.this, HomeActivity.class);
+//                startActivity(gotoback);
+//            }
+//        });
     }
 }

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,11 +19,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Random;
 
-public class CheckoutActivity extends AppCompatActivity {
+public class CheckoutDressesActivity extends AppCompatActivity {
     Button payNow, btn_plus, btn_minus;
     TextView xnama_barang, xukuran, xharga;
     TextView texttotalharga, textjumlahproduk;
@@ -48,7 +45,7 @@ public class CheckoutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_checkout);
+        setContentView(R.layout.activity_checkout_dresses);
 
         getUsernameLocal();
 
@@ -79,7 +76,7 @@ public class CheckoutActivity extends AppCompatActivity {
         btn_minus.setEnabled(false);
 
         //Mengambil data dari firebase berdasarkan intent
-        reference = FirebaseDatabase.getInstance().getReference().child("Tops").child(barang_baru);
+        reference = FirebaseDatabase.getInstance().getReference().child("Dresses").child(barang_baru);
         reference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -145,7 +142,7 @@ public class CheckoutActivity extends AppCompatActivity {
                         reference3.getRef().child("jumlah").setValue(valuejumlahproduk);
                         reference3.getRef().child("harga").setValue(valuetotalharga);
 
-                        Intent gotopayment = new Intent(CheckoutActivity.this, PaymentActivity.class);
+                        Intent gotopayment = new Intent(CheckoutDressesActivity.this, PaymentActivity.class);
                         startActivity(gotopayment);
                     }
 
@@ -160,7 +157,7 @@ public class CheckoutActivity extends AppCompatActivity {
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoback = new Intent(CheckoutActivity.this, HomeActivity.class);
+                Intent gotoback = new Intent(CheckoutDressesActivity.this, HomeActivity.class);
                 startActivity(gotoback);
             }
         });
