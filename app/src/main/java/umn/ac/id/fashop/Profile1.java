@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 public class Profile1 extends AppCompatActivity {
-    Button edit_profile, btn_signout, btn_history, btn_location;
+    Button edit_profile, btn_signout, btn_history;
     ImageView back;
     TextView username,nama_lengkap, address, phone_number, email_address;
     ImageView photo_profile;
@@ -48,7 +48,6 @@ public class Profile1 extends AppCompatActivity {
         nama_lengkap = findViewById(R.id.nama_lengkap);
         photo_profile = findViewById(R.id.photo_profile);
         email_address = findViewById(R.id.email_address);
-        btn_location = findViewById(R.id.btn_location);
 
         reference = FirebaseDatabase.getInstance().getReference()
                 .child("Users").child(username_key_new);
@@ -87,14 +86,6 @@ public class Profile1 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gotoback = new Intent(Profile1.this, HomeActivity.class);
                 startActivity(gotoback);
-            }
-        });
-
-        btn_location.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoLocation = new Intent(Profile1.this, MapsActivity.class);
-                startActivity(gotoLocation);
             }
         });
 
