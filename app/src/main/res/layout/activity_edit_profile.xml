@@ -70,19 +70,25 @@
             </com.github.florent37.shapeofview.shapes.CircleView>
 
             <Button
+                android:id="@+id/btn_edit_camera"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="75dp"
+                android:background="@drawable/camera"
+                android:translationZ="90dp"
+                app:layout_constraintStart_toStartOf="@id/view3"
+                app:layout_constraintTop_toTopOf="@+id/view3"
+                app:layout_constraintEnd_toStartOf="@id/btn_edit_photo"/>
+
+            <Button
                 android:id="@+id/btn_edit_photo"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginEnd="60dp"
-                android:background="@drawable/bg_btn_plus"
-                android:text="+"
-                android:textColor="#FFF"
-                android:textSize="20sp"
+                android:layout_marginTop="75dp"
+                android:background="@drawable/btnimage"
                 android:translationZ="90dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.72"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/view3"
+                app:layout_constraintStart_toEndOf="@id/btn_edit_camera"
                 app:layout_constraintTop_toTopOf="@+id/view3" />
 
             <LinearLayout

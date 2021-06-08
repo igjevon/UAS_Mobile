@@ -160,8 +160,9 @@
                         android:textSize="20sp" />
                     <Button
                         android:id="@+id/btn_location"
-                        android:layout_width="50dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="50dp"
+                        android:padding="2dp"
                         android:text="Location"
                         android:background="@drawable/bg_btn_blue_primary"/>
 

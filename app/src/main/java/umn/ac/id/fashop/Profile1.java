@@ -90,6 +90,14 @@ public class Profile1 extends AppCompatActivity {
             }
         });
 
+        btn_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoLocation = new Intent(Profile1.this, MapsActivity.class);
+                startActivity(gotoLocation);
+            }
+        });
+
         btn_signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,14 +120,6 @@ public class Profile1 extends AppCompatActivity {
             public void onClick(View v) {
                 Intent gotoHistory = new Intent(Profile1.this, HistoryActivity.class);
                 startActivity(gotoHistory);
-            }
-        });
-
-        btn_location.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gotoLocation = new Intent(Profile1.this, MapsActivity.class);
-                startActivity(gotoLocation);
             }
         });
     }

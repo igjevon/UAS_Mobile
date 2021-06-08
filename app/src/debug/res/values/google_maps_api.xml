@@ -7,12 +7,13 @@
     https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=D8:BE:51:77:79:70:15:D8:F2:1E:55:51:EA:34:03:08:69:F1:B8:B5%3Bumn.ac.id.fashop
 
     You can also add your credentials to an existing key, using these values:
+    7B:3B:07:65:4B:DA:23:5E:62:FE:3F:B9:04:A1:91:6B:54:26:86:0A
 
     Package name:
     umn.ac.id.fashop
 
     SHA-1 certificate fingerprint:
-    D8:BE:51:77:79:70:15:D8:F2:1E:55:51:EA:34:03:08:69:F1:B8:B5
+    7B:3B:07:65:4B:DA:23:5E:62:FE:3F:B9:04:A1:91:6B:54:26:86:0A
 
     Alternatively, follow the directions here:
     https://developers.google.com/maps/documentation/android/start#get-key
@@ -20,5 +21,5 @@
     Once you have your key (it starts with "AIza"), replace the "google_maps_key"
     string in this file.
     -->
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAQT_oivQYdIM7qF287n0-gSGFST2lrB-o</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDkliM_nt20xyYf2aIzxCXofa70bJb0U3M</string>
 </resources>
